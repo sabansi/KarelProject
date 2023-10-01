@@ -4,5 +4,6 @@ public class Problem01 extends Karel{
 		while(frontIsClear()){
 			move();
 		}
+		turnLeft();
 	}
 }
