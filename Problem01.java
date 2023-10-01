@@ -8,5 +8,8 @@ public class Problem01 extends Karel{
 		move();
 		turnLeft();
 		turnLeft();
+		while(frontIsClear()){
+			move();
+		}
 	}
 }
