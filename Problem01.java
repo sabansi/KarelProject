@@ -12,9 +12,9 @@ public class Problem01 extends Karel{
 		while(frontIsClear()){
 			move();
 		}
-		while(!facingNorth()){
-			turnLeft();
-		}
+		//while(!facingNorth()){
+		//	turnLeft();
+		//}
 	}
 	}
 }
