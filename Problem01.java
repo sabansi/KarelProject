@@ -2,15 +2,15 @@ import stanford.karel.Karel;
 public class Problem01 extends Karel{
 	public void run(){
 		while (true) {
-            putBeeper(); // Place a beeper on the current corner.
+            putBeeper(); 
             if (frontIsClear()) {
-                move(); // Move to the next corner in the current row.
+                move(); 
             } 
             else {
                 if (facingEast()) {
                     turnLeft();
                     if (frontIsClear()) {
-                        move(); // Move to the next row.
+                        move(); 
                         turnLeft();
                     }
                 }
@@ -19,13 +19,13 @@ public class Problem01 extends Karel{
                     turnLeft();
                     turnLeft();
                     if (frontIsClear()) {
-                        move(); // Move to the next row.
+                        move(); 
                         turnLeft();
                         turnLeft();
                         turnLeft();
                     } 
                 }
-                if (frontIsBlocked() && facingNorth()) {
+                if (facingNorth() && frontIsBlocked()) {
                     break;
                 }
             }
