@@ -1,7 +1,6 @@
 import stanford.karel.Karel;
 public class Problem01 extends Karel{
 	public void run(){
-			beepersInBag();
 		while (true) {
             // Check if there is a beeper on the current corner.
             if (noBeepersPresent()) {
