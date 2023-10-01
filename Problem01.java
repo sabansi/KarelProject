@@ -1,5 +1,5 @@
 import stanford.karel.Karel;
-public class Problem01 extends Karel{
+public class Problem01 extends Karel {
 	public void run(){
 		while (true) {
             putBeeper(); 
@@ -7,27 +7,27 @@ public class Problem01 extends Karel{
                 move(); 
             } 
             else {
-                if (facingEast()) {
-                    turnLeft();
-                    if (frontIsClear()) {
-                        move(); 
-                        turnLeft();
-                    }
+                if (facingWest()) {
+                	 turnLeft();
+                     turnLeft();
+                     turnLeft();
+                     if (frontIsClear()) {
+                         move(); 
+                         turnLeft();
+                         turnLeft();
+                         turnLeft();
+                     }  
                 }
                 else {
-                    turnLeft();
-                    turnLeft();
-                    turnLeft();
-                    if (frontIsClear()) {
-                        move(); 
-                        turnLeft();
-                        turnLeft();
-                        turnLeft();
-                    } 
+                	 turnLeft();
+                     if (frontIsClear()) {
+                         move(); 
+                         turnLeft();
+                     }
                 }
-                if (facingNorth() && frontIsBlocked()) {
-                    break;
-                }
+              //  if (facingNorth() && frontIsBlocked()) {
+             //       break;
+               // }
             }
         }
     }
