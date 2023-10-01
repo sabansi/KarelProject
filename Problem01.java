@@ -2,35 +2,32 @@ import stanford.karel.Karel;
 public class Problem01 extends Karel{
 	public void run(){
 		while (true) {
-            // Check if there is a beeper on the current corner.
-            if (noBeepersPresent()) {
-                // If there's no beeper, put one.
-                putBeeper();
-            }
+            putBeeper(); // Place a beeper on the current corner.
 
-            // Move to the next corner in the current row.
             if (frontIsClear()) {
-                move();
+                move(); // Move to the next corner in the current row.
             } else {
-                // If there's no clear path in the current row, move to the next row.
                 if (facingEast()) {
                     turnLeft();
-                    move();
-                    turnLeft();
+                    if (frontIsClear()) {
+                        move(); // Move to the next row.
+                        turnLeft();
+                    } else {
+                        break; // Exit the loop if Karel can't move further.
+                    }
                 } else {
-                	turnLeft();
-                    turnLeft();
-                    turnLeft();
-                    move();
                     turnLeft();
                     turnLeft();
                     turnLeft();
+                    if (frontIsClear()) {
+                        move(); // Move to the next row.
+                        turnLeft();
+                        turnLeft();
+                        turnLeft();
+                    } else {
+                        break; // Exit the loop if Karel can't move further.
+                    }
                 }
-            }
-            
-            // Check if Karel has finished filling the world with beepers.
-            if (frontIsBlocked() && facingNorth()) {
-                break;
             }
         }
     }
