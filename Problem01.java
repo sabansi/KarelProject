@@ -1,20 +1,33 @@
 import stanford.karel.Karel;
 public class Problem01 extends Karel{
 	public void run(){
-		while(frontIsClear()){
-		while(frontIsClear()){
-			move();
+		while (leftIsClear()){
+		      putBeeperRow();
+		      turnForClearLeftRow();
+		      putBeeperRow();
+		      turnForClearRightRow();      
+		   }
+		   putBeeperRow();
 		}
-		turnLeft();
-		move();
-		turnLeft();
-		//turnLeft();
-		while(frontIsClear()){
-			move();
+
+		function turnForClearLeftRow() {
+		   turnLeft();
+		   move();
+		   turnLeft();
 		}
-		//while(!facingNorth()){
-		//	turnLeft();
-		//}
-	}
-	}
+
+		function turnForClearRightRow() {
+		   turnRight();
+		   move();
+		   turnRight();
+		}
+
+		function putBeeperRow() {
+		   while(frontIsClear()){ 
+		      putBeeper();
+		      move();
+		   }
+		   putBeeper();
+		}
 }
+
