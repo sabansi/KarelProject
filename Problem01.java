@@ -8,7 +8,6 @@ public class Problem01 extends Karel{
 		      turnForClearRightRow();      
 		   }
 		   putBeeperRow();
-		}
 
 		function turnForClearLeftRow() {
 		   turnLeft();
@@ -30,4 +29,4 @@ public class Problem01 extends Karel{
 		   putBeeper();
 		}
 }
-
+}
