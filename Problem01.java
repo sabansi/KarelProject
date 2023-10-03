@@ -25,9 +25,9 @@ public class Problem01 extends Karel {
                          turnLeft();
                      }
                 }
-                if (facingNorth() && frontIsBlocked()) {
-                    break;
-                }
+             //   if (facingNorth() && frontIsBlocked()) {
+              //      break;
+            //    }
             }
         }
     }
