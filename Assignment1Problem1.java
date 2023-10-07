@@ -1,6 +1,6 @@
-import stanford.karel.Karel;
+import stanford.karel.*;
 
-public class Assignment1Problem1 extends Karel{
+public class Assignment1Problem1 extends SuperKarel{
 	public void run() {
 		findMagazine();
 		//takeMagazine();
@@ -12,10 +12,5 @@ public class Assignment1Problem1 extends Karel{
 		move();
 		turnRight();
 		move();
-	}
-	private void turnRight() {
-		for(int i=0; i<3; i++) {
-			turnLeft();
-			}
 	}
 }
