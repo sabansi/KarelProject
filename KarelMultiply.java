@@ -16,6 +16,10 @@ public class KarelMultiply extends Karel {
 			}
 			returnAtThirdPile();
 			returnBeepersToThirdPile();
+			move();
+			move();
+			move();
+			turnAround();
 		}
 	}
 	public void addBeepersToForthAndFifthPiles() {
