@@ -25,5 +25,7 @@ public class Assignment1Problem1 extends SuperKarel{
 		for(int i=0; i<3; i++) {
 		move();
 		}
+		turnRight();
+		move();
 	}
 }
