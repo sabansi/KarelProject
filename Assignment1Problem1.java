@@ -21,7 +21,7 @@ public class Assignment1Problem1 extends SuperKarel{
 	}
 	//karel gets back at home with the magazine
 	private void getBackAtHomeWithMagazine() {
-		turnRight();
+		turnLeft();
 		move();
 	}
 }
