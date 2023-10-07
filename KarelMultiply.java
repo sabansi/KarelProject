@@ -14,6 +14,7 @@ public class KarelMultiply extends Karel {
 				move();
 				turnAround();
 			}
+			returnAtThirdPile();
 			returnBeepersToThirdPile();
 		}
 	}
