@@ -25,6 +25,7 @@ public class Assignment1Problem1 extends SuperKarel{
 		for(int i=0; i<3; i++) {
 		move();
 		}
+		//karel gets the same starting position as soon as he gets home
 		turnRight();
 		move();
 		turnRight();
