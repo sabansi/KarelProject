@@ -3,58 +3,27 @@ import stanford.karel.Karel;
 public class Problem09 extends Karel {
 	public void run() {
 		move();
-		while (beepersPresent()) {
+		while(beepersPresent()) {	
 			pickBeeper();
 			move();
-			transferBeepers();
+			while(beepersPresent()) {
+				pickBeeper();
+				addBeepersToForthAndFifthPiles();
+				turnAround();
+				move();
+				move();
+				turnAround();
+			}
 		}
 	}
-	
-	// transfers beepers from third to fourth
-	private void transferBeepers() {
-		addBeepers();
-		moveTwice();
-		turnAround();
-		returnBeepers();
-		for (int i = 0; i < 3; i++) {
-			move();
-		}
-		turnAround();
+	public void addBeepersToForthAndFifthPiles() {
+		move();
+		putBeeper();
+		move();
+		putBeeper();
 	}
-	
-	// adds beepers from third to fourth and fifth
-	private void addBeepers() {
-		while (beepersPresent()) {
-			pickBeeper();
-			move();
-			putBeeper();
-			move();
-			putBeeper();
-			turnAround();
-			moveTwice();
-			turnAround();
-		}
-	}
-	
-	// returns beepers from fifth to third
-	private void returnBeepers() {
-		while (beepersPresent()) {
-			pickBeeper();
-			moveTwice();
-			putBeeper();
-			turnAround();
-			moveTwice();
-			turnAround();
-		}
-	}
-	
-	private void turnAround() {
+	public void turnAround() {
 		turnLeft();
 		turnLeft();
-	}
-	
-	private void moveTwice() {
-		move();
-		move();
 	}
 }
