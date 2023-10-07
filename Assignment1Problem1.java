@@ -27,5 +27,6 @@ public class Assignment1Problem1 extends SuperKarel{
 		}
 		turnRight();
 		move();
+		turnLeft();
 	}
 }
