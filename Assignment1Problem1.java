@@ -12,7 +12,6 @@ public class Assignment1Problem1 extends Karel{
 		move();
 		turnRight();
 		move();
-		move();
 	}
 	private void turnRight() {
 		for(int i=0; i<3; i++) {
