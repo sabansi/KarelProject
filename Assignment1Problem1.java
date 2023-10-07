@@ -12,7 +12,7 @@ public class Assignment1Problem1 extends SuperKarel{
 		move();
 		turnRight();
 		move();
-		turnRight();
+		turnLeft();
 		move();
 	}
 }
