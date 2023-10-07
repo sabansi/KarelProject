@@ -9,6 +9,7 @@ public class Assignment1Problem1 extends Karel{
 	//karel moves to the position where beeper is
 	private void findMagazine() {
 		move();
+		move();
 		turnRight();
 		for(int i=0; i<3; i++) {
 		move();
