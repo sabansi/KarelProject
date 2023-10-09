@@ -8,7 +8,7 @@ public class Problem12 extends GraphicsProgram{
 		GOval myOval = new GOval(100, 200);
 		add(myOval, 100, 100);
 		myOval.setFilled(true);
-		myOval.setColor(Color.CYAN);
+		myOval.setColor(Color.magenta);
 		//GOval secondOval = new GOval(100, 200);
 		myOval = new GOval(200, 200);
 		add(myOval, 200, 200);
