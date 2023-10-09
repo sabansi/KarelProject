@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 import acm.graphics.*;
 import acm.program.GraphicsProgram;
 
@@ -9,5 +11,6 @@ public class Problem12 extends GraphicsProgram{
 		myOval = new GOval(200, 200);
 		add(myOval, 200, 200);
 		myOval.setFilled(true);
+		myOval.setColor(Color.PINK);
 	}
 }
