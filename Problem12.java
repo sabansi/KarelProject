@@ -1,8 +1,8 @@
-import acm.graphics.GRect;
+import acm.graphics.*;
 import acm.program.GraphicsProgram;
 
 public class Problem12 extends GraphicsProgram{
 	public void run() {
-		new GRect(200, 20);
+		add(new GRect(200, 20));
 	}
 }
