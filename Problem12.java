@@ -37,7 +37,10 @@ public class Problem12 extends GraphicsProgram {
 				
 			}
 			else {
-				
+				x1 = x2;
+				y1 = y2;
+				x2 = x1 + HOUSE_WIDTH / 2;
+				y2 = y1 + ROOF_HEIGHT;
 			}
 			GLine leftRoof = new GLine(x1, y1, x2, y2);
 			add(leftRoof); 
