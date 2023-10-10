@@ -27,18 +27,11 @@ public class Problem12 extends GraphicsProgram {
 		add(wall, x, y);
 	}
 	private void drawRoof() {
-		double x1 = 0;
-		double y1 = getHeight()/2;
-		double x2 = getWidth();
-		double y2 = y1;
-		GLine 
-	}
-	private void drawMidLine() {
 		double x1 = (int) (getWidth() / 2 - HOUSE_WIDTH / 2);
 		double y1 = (int) (getHeight() - HOUSE_HEIGHT);
 		double x2 = x1 + HOUSE_WIDTH / 2;
 		double y2 = y1;
 		GLine Line = new GLine(x1, y1, x2, y2);
-		add(Line);
+		add(Line); 
 	}
 }
