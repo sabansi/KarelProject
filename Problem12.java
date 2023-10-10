@@ -31,7 +31,16 @@ public class Problem12 extends GraphicsProgram {
 		double y1 = (int) (getHeight() - HOUSE_HEIGHT);
 		double x2 = x1 + HOUSE_WIDTH / 2;
 		double y2 = y1 - ROOF_HEIGHT;
-		GLine leftRoof = new GLine(x1, y1, x2, y2);
-		add(leftRoof); 
+		
+		for(int i = 0; i < 2; i ++) {
+			if(i == 0) {
+				
+			}
+			else {
+				
+			}
+			GLine leftRoof = new GLine(x1, y1, x2, y2);
+			add(leftRoof); 
+		}
 	}
 }
