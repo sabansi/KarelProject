@@ -31,15 +31,24 @@ public class Problem12 extends GraphicsProgram {
 		double x2 = x1 + HOUSE_WIDTH / 2;
 		double y2 = y1 - ROOF_HEIGHT;
 		
-	
-		
+		for(int i = 0; i < 2; i ++) {
+			if(i == 0) {
+				
+			}
+			else {
 				x1 = x2;
 				y1 = y2;
 				x2 = x1 + HOUSE_WIDTH / 2;
 				y2 = y1 + ROOF_HEIGHT;
-			
+			}
 			GLine leftRoof = new GLine(x1, y1, x2, y2);
 			add(leftRoof); 
 		}
 	}
-
+	private void drawDoor() {
+		GRect wall = new GRect(DOOR_WIDTH, DOOR_HEIGHT);
+		int x = (int) (HOUSE_WIDTH/2);
+		int y = (int) (getHeight() - HOUSE_HEIGHT);
+		add(wall, x, y);
+	}
+}
