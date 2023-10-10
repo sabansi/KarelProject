@@ -3,19 +3,27 @@ import java.awt.Color;
 import acm.graphics.*;
 import acm.program.GraphicsProgram;
 
-public class Problem12 extends GraphicsProgram{
+public class Problem12 extends GraphicsProgram {
+	private static final double HOUSE_WIDTH = 200;
+	private static final double HOUSE_HEIGHT  = 300;
+	private static final double DOOR_WIDTH  = 40;
+	private static final double DOOR_HEIGHT  = 60;
 	public void run() {
-		/* GOval myOval = new GOval(100, 200);
-		add(myOval, 100, 100);
-		myOval.setFilled(true);
-		myOval.setColor(Color.magenta);
-		//GOval secondOval = new GOval(100, 200);
-		myOval = new GOval(200, 200);
-		add(myOval, 200, 200);
-		myOval.setFilled(true);
-		myOval.setColor(Color.PINK); 
-		*/
 		drawMidLine();
+		drawHouse();
+	}
+	
+	private void drawHouse() {
+		drawWall();
+		drawRoof();
+		drawDoor();
+		drawWindows();
+	}
+	private void drawWall() {
+		GRect wall = new GRect(HOUSE_WIDTH, HOUSE_HEIGHT);
+		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2);
+		int y = (int) (getHeight() - HOUSE_HEIGHT);
+		add(wall, x, y);
 	}
 	private void drawMidLine() {
 		double x1 = 0;
