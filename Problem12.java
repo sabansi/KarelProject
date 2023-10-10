@@ -9,7 +9,7 @@ public class Problem12 extends GraphicsProgram {
 	private static final double DOOR_WIDTH  = 40;
 	private static final double DOOR_HEIGHT  = 60;
 	public void run() {
-		drawMidLine();
+	//	drawMidLine();
 		drawHouse();
 	}
 	
