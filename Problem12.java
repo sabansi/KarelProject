@@ -16,7 +16,7 @@ public class Problem12 extends GraphicsProgram {
 	
 	private void drawHouse() {
 		drawWall();
-		//drawRoof();
+		drawRoof();
 		//drawDoor();
 		//drawWindows();
 	}
@@ -30,8 +30,8 @@ public class Problem12 extends GraphicsProgram {
 		double x1 = (int) (getWidth() / 2 - HOUSE_WIDTH / 2);
 		double y1 = (int) (getHeight() - HOUSE_HEIGHT);
 		double x2 = x1 + HOUSE_WIDTH / 2;
-		double y2 = y1;
-		GLine Line = new GLine(x1, y1, x2, y2);
-		add(Line); 
+		double y2 = y1 - ROOF_HEIGHT;
+		GLine leftRoof = new GLine(x1, y1, x2, y2);
+		add(leftRoof); 
 	}
 }
