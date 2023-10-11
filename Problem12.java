@@ -50,14 +50,14 @@ public class Problem12 extends GraphicsProgram {
 	
 	private void drawDoor() {
 		GRect wall = new GRect(DOOR_WIDTH, DOOR_HEIGHT);
-		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + DOOR_WIDTH * 5);
+		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + DOOR_WIDTH * 2);
 		int y = (int) (getHeight() - DOOR_HEIGHT);
 		add(wall, x, y);
 	}
 	
 	private void drawWindows() {
 		GRect wall = new GRect(WINDOWS_WIDTH, WINDOWS_HEIGHT);
-		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 - WINDOWS_WIDTH);
+		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 - WINDOWS_WIDTH * 2);
 		int y = (int) (getHeight() - DOOR_HEIGHT - 150);
 		add(wall, x, y);
 	}
