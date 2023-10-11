@@ -6,7 +6,7 @@ import acm.program.GraphicsProgram;
 public class Problem12 extends GraphicsProgram {
 	private static final double HOUSE_WIDTH = 200;
 	private static final double HOUSE_HEIGHT  = 300;
-	private static final double DOOR_WIDTH  = 70;
+	private static final double DOOR_WIDTH  = 50;
 	private static final double DOOR_HEIGHT  = 100;
 	private static final double ROOF_HEIGHT  = 100;
 	private static final double WINDOWS_WIDTH = 40;
@@ -50,7 +50,7 @@ public class Problem12 extends GraphicsProgram {
 	
 	private void drawDoor() {
 		GRect wall = new GRect(DOOR_WIDTH, DOOR_HEIGHT);
-		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 +  DOOR_WIDTH);
+		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + 80);
 		int y = (int) (getHeight() - DOOR_HEIGHT);
 		add(wall, x, y);
 	}
