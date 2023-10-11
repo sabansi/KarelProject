@@ -9,6 +9,8 @@ public class Problem12 extends GraphicsProgram {
 	private static final double DOOR_WIDTH  = 40;
 	private static final double DOOR_HEIGHT  = 100;
 	private static final double ROOF_HEIGHT  = 100;
+	private static final double WINDOWS_WIDTH = 20;
+	private static final double WINDOWS_HEIGHT  = 20;
 	public void run() {
 		drawHouse();
 	}
@@ -45,10 +47,18 @@ public class Problem12 extends GraphicsProgram {
 			add(leftRoof); 
 		}
 	}
+	
 	private void drawDoor() {
 		GRect wall = new GRect(DOOR_WIDTH, DOOR_HEIGHT);
-		int x = (int) (getWidth() / 2 - HOUSE_WIDTH /2 + 2 * DOOR_WIDTH);
+		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + 2 * DOOR_WIDTH);
 		int y = (int) (getHeight() - DOOR_HEIGHT);
+		add(wall, x, y);
+	}
+	
+	private void drawWindows() {
+		GRect wall = new GRect(WINDOWS_WIDTH, WINDOWS_HEIGHT);
+		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + 2 * DOOR_WIDTH);
+		int y = (int) (getHeight() - DOOR_HEIGHT - 30);
 		add(wall, x, y);
 	}
 }
