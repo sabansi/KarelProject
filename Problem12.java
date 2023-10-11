@@ -25,6 +25,8 @@ public class Problem12 extends GraphicsProgram {
 		GRect wall = new GRect(HOUSE_WIDTH, HOUSE_HEIGHT);
 		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2);
 		int y = (int) (getHeight() - HOUSE_HEIGHT);
+		wall.setFilled(true);
+		wall.setColor(Color.GRAY);
 		add(wall, x, y);
 	}
 	private void drawRoof() {
