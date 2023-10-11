@@ -19,7 +19,7 @@ public class Problem12 extends GraphicsProgram {
 		drawWall();
 		drawRoof();
 		drawDoor();
-		//drawWindows();
+		drawWindows();
 	}
 	private void drawWall() {
 		GRect wall = new GRect(HOUSE_WIDTH, HOUSE_HEIGHT);
