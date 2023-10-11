@@ -58,7 +58,7 @@ public class Problem12 extends GraphicsProgram {
 	private void drawWindows() {
 		GRect wall = new GRect(WINDOWS_WIDTH, WINDOWS_HEIGHT);
 		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + 2 * DOOR_WIDTH);
-		int y = (int) (getHeight() - DOOR_HEIGHT - 30);
+		int y = (int) (getHeight() - DOOR_HEIGHT - 300);
 		add(wall, x, y);
 	}
 }
