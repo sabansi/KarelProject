@@ -64,6 +64,6 @@ public class Problem12 extends GraphicsProgram {
 		GRect window2 = new GRect(WINDOWS_WIDTH, WINDOWS_HEIGHT);
 		int x2 = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + 200);
 		int y2 = (int) (getHeight() - DOOR_HEIGHT - 140);
-		add(window1, x2, y2);
+		add(window2, x2, y2);
 	}
 }
