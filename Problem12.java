@@ -26,7 +26,7 @@ public class Problem12 extends GraphicsProgram {
 		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2);
 		int y = (int) (getHeight() - HOUSE_HEIGHT);
 		wall.setFilled(true);
-		wall.setColor(Color.GRAY);
+		wall.setColor(Color.DARK_GRAY);
 		add(wall, x, y);
 	}
 	private void drawRoof() {
@@ -55,7 +55,7 @@ public class Problem12 extends GraphicsProgram {
 		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + DOOR_WIDTH * 1.5);
 		int y = (int) (getHeight() - DOOR_HEIGHT);
 		door.setFilled(true);
-		door.setColor(Color.DARK_GRAY);
+		door.setColor(Color.lightGray);
 		add(door, x, y);
 	}
 	
