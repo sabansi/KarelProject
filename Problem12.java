@@ -49,16 +49,21 @@ public class Problem12 extends GraphicsProgram {
 	}
 	
 	private void drawDoor() {
-		GRect wall = new GRect(DOOR_WIDTH, DOOR_HEIGHT);
-		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + DOOR_WIDTH*1.5);
+		GRect door = new GRect(DOOR_WIDTH, DOOR_HEIGHT);
+		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + DOOR_WIDTH * 1.5);
 		int y = (int) (getHeight() - DOOR_HEIGHT);
-		add(wall, x, y);
+		add(door, x, y);
 	}
 	
 	private void drawWindows() {
-		GRect wall = new GRect(WINDOWS_WIDTH, WINDOWS_HEIGHT);
+		GRect window1 = new GRect(WINDOWS_WIDTH, WINDOWS_HEIGHT);
 		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + 20);
 		int y = (int) (getHeight() - DOOR_HEIGHT - 140);
-		add(wall, x, y);
+		add(window1, x, y);
+		
+		GRect window2 = new GRect(WINDOWS_WIDTH, WINDOWS_HEIGHT);
+		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + 200);
+		int y = (int) (getHeight() - DOOR_HEIGHT - 140);
+		add(window1, x, y);
 	}
 }
