@@ -55,7 +55,7 @@ public class Problem12 extends GraphicsProgram {
 		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + DOOR_WIDTH * 1.5);
 		int y = (int) (getHeight() - DOOR_HEIGHT);
 		door.setFilled(true);
-		door.setColor(Color.WHITE);
+		door.setColor(Color.DARK_GRAY);
 		add(door, x, y);
 	}
 	
