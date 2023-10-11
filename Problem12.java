@@ -6,7 +6,7 @@ import acm.program.GraphicsProgram;
 public class Problem12 extends GraphicsProgram {
 	private static final double HOUSE_WIDTH = 200;
 	private static final double HOUSE_HEIGHT  = 300;
-	private static final double DOOR_WIDTH  = 40;
+	private static final double DOOR_WIDTH  = 70;
 	private static final double DOOR_HEIGHT  = 100;
 	private static final double ROOF_HEIGHT  = 100;
 	private static final double WINDOWS_WIDTH = 40;
