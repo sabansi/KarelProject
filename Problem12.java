@@ -58,12 +58,12 @@ public class Problem12 extends GraphicsProgram {
 	private void drawWindows() {
 		GRect window1 = new GRect(WINDOWS_WIDTH, WINDOWS_HEIGHT);
 		int x1 = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + 20);
-		int y1 = (int) (getHeight() - DOOR_HEIGHT - 100);
+		int y1 = (int) (getHeight() - DOOR_HEIGHT - 120);
 		add(window1, x1, y1);
 		
 		GRect window2 = new GRect(WINDOWS_WIDTH, WINDOWS_HEIGHT);
 		int x2 = (int) (getWidth() / 2 - HOUSE_WIDTH / 2 + 40 + DOOR_WIDTH * 2);
-		int y2 = (int) (getHeight() - DOOR_HEIGHT - 100);
+		int y2 = (int) (getHeight() - DOOR_HEIGHT - 120);
 		add(window2, x2, y2);
 	}
 }
