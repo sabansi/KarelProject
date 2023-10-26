@@ -8,6 +8,6 @@ public class Problem30 extends ConsoleProgram {
 			ans =  n % 10;
 			n /= 10;
 		}
-		println("the inversed number of: " + n + " is : ");
+		println("the inversed number of " + n + " is : ");
 	}
 }
