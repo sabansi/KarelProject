@@ -6,11 +6,11 @@ public class Problem28 extends ConsoleProgram {
 		int ans = 0;
 		int n = 0;
 		while(n != SENTINEL) {
-			n = readInt("Enter a number: ");
+			 n = readInt("Enter a number: ");
 			if(n % 2 == 0) {
 				ans++;
 			}
+			println("the amount of even numbers is: " + ans);
 		}
-		println("the amount of even numbers is: " + ans);
 	}
 }
