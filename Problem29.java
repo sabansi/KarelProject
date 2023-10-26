@@ -6,7 +6,7 @@ public class Problem29 extends ConsoleProgram {
 		int first = 1;
 		int second = 1;
 		int ans = 0;
-		for(int i=0; i < n; i++) {
+		for(int i = 2; i < n; i++) {
 			ans = first + second;
 			first = second;
 			second = ans;
