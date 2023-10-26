@@ -1,22 +1,16 @@
 import acm.program.ConsoleProgram;
 
-public class Problem28 extends ConsoleProgram { 
-	private static final int SENTINEL = -1;
+public class Problem28 extends ConsoleProgram {
+	public static final int SENTINEL = -1;
 	public void run() {
-		while(true) {
-			int n = readInt("Enter a number: ");
-			
-
-				println("the amount of even numbers is: " + countEvens(n));
-	
-			}
-		}
-	private int countEvens(int n) {
 		int ans = 0;
+		int n = 0;
+		while(n != SENTINEL) {
+			n = readInt("Enter a number: ");
 			if(n % 2 == 0) {
 				ans++;
 			}
-			if(n == SENTINEL)
-			return ans;
+		}
+		println("the amount of even numbers is: " + ans);
 	}
 }
