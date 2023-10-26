@@ -1,10 +1,13 @@
 import acm.program.ConsoleProgram;
 
 public class Problem28 extends ConsoleProgram { 
+	private static final int SENTINEL = -1;
 	public void run() {
 		while(true) {
 			int n = readInt("Enter a number: ");
-			println("the amount of even numbers is: " + countEvens(n));
+			if(n == SENTINEL) {
+				println("the amount of even numbers is: " + countEvens(n));
+					}
 			}
 		}
 	private int countEvens(int n) {
@@ -12,8 +15,6 @@ public class Problem28 extends ConsoleProgram {
 			if(n % 2 == 0) {
 				ans++;
 			}
-			else if(n == -1) {
-				return ans;
-			}
+			return ans;
 	}
 }
