@@ -3,6 +3,9 @@ import acm.program.ConsoleProgram;
 public class Problem29 extends ConsoleProgram {
 	public void run() {
 		int n = readInt("enter a number: ");
+		if(n == 1 || n == 2) {
+			println("the " + n + "th number of fibonacci sequence is: 2");
+		}
 		println("the " + n + "th number of fibonacci sequence is: " + fibonacciSeq(n));
 	}
 	private int fibonacciSeq(int n) {
