@@ -5,9 +5,10 @@ public class Problem28 extends ConsoleProgram {
 	public void run() {
 		while(true) {
 			int n = readInt("Enter a number: ");
-			if(n == SENTINEL) {
+			
+
 				println("the amount of even numbers is: " + countEvens(n));
-					}
+	
 			}
 		}
 	private int countEvens(int n) {
@@ -15,6 +16,7 @@ public class Problem28 extends ConsoleProgram {
 			if(n % 2 == 0) {
 				ans++;
 			}
+			if(n == SENTINEL)
 			return ans;
 	}
 }
