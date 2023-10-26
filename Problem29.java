@@ -5,7 +5,7 @@ public class Problem29 extends ConsoleProgram {
 		int n = readInt("enter a number: ");
 		int first = 1;
 		int second = 1;
-		int ans;
+		int ans = 0;
 		for(int i=0; i < n; i++) {
 			ans = first + second;
 			first = second;
