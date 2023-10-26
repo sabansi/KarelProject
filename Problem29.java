@@ -6,7 +6,9 @@ public class Problem29 extends ConsoleProgram {
 		if(n == 1 || n == 2) {
 			println("the " + n + "th number of fibonacci sequence is: 2");
 		}
-		println("the " + n + "th number of fibonacci sequence is: " + fibonacciSeq(n));
+		else {
+			println("the " + n + "th number of fibonacci sequence is: " + fibonacciSeq(n));
+		}
 	}
 	private int fibonacciSeq(int n) {
 		int first = 1;
