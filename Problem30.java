@@ -4,7 +4,7 @@ public class Problem30 extends ConsoleProgram {
 	public void run() {
 		int n = readInt("Enter a number: ");
 		int m = n;
-		println("the inversed number of " + m + " is :" + reverse(m));
+		println("the inversed number of " + m + " is : " + reverse(m));
 	}
 	private int reverse(int n) {
 		int ans = 0;
