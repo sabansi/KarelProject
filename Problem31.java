@@ -18,3 +18,5 @@ public class Problem31 extends ConsoleProgram{
 		return true;
 	}
 }
+
+
