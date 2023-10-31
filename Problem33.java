@@ -9,7 +9,7 @@ import acm.graphics.*;
 public class Problem33 extends GraphicsProgram {
 	public void run() {
 		RandomGenerator rand = new RandomGenerator();
-		int radius = rand.nextInt(0, 199);
+		int radius = rand.nextInt(50, 400);
 		GOval circle = new GOval(getWidth() / 2, getHeight() / 2, radius, radius);
 		circle.setFilled(true);
 		Color randColor = rand.nextColor();
