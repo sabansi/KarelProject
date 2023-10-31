@@ -14,5 +14,6 @@ public class Problem33 extends GraphicsProgram {
 		circle.setFilled(true);
 		Color randColor = rand.nextColor();
 		circle.setColor(randColor);
+		add(circle);
 	}
 }
