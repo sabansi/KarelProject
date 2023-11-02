@@ -9,7 +9,7 @@ public class Problem29 extends ConsoleProgram {
 		if(n == 1 || n == 2) {
 			return 1;
 		}
-		int first = 1;
+		int first = 0;
 		int second = 1;
 		int ans = 0;
 		for(int i = 0; i < n-2; i++) {
