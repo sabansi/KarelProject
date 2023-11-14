@@ -13,7 +13,7 @@ public class Problem43 extends GraphicsProgram {
 	public void run() {
 		circle = new GOval(2 * RADIUS, 2 * RADIUS);
 		circle.setFilled(true);
-		add(circle, getWidth() / 2 - RADIUS, getHeight() / 2 - RADIUS);
+	//	add(circle, getWidth() / 2 - RADIUS, getHeight() / 2 - RADIUS);
 		addMouseListeners();
 	}
 
