@@ -15,5 +15,6 @@ public class Problem41 extends GraphicsProgram {
 		int x = e.getX() - RADIUS;
 		int y = e.getY() - RADIUS;
 		add(brush, x, y);
+		pause(10);
 	}
 }
