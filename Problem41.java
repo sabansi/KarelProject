@@ -21,14 +21,14 @@ public class Problem41 extends GraphicsProgram {
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		addBrush();
+		addBrush(e.getX(), e.getY());
 	}
 
-	private void addBrush() {
+	private void addBrush(int centerX, int centerY) {
 		GOval brush = new GOval(2 * RADIUS, 2 * RADIUS);
 		brush.setFilled(true);
-		int x = e.getX() - RADIUS;
-		int y = e.getY() - RADIUS;
+		int x = centerX - RADIUS;
+		int y = centerY - RADIUS;
 		add(brush, x, y);
 	}
 }
