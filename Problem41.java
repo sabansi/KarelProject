@@ -19,7 +19,7 @@ public class Problem41 extends GraphicsProgram {
 		add(brush, x, y);
 	}
 
-	@Override
+/*	@Override
 	public void mousePressed(MouseEvent e) {
 		addBrush(e.getX(), e.getY());
 	}
@@ -30,5 +30,5 @@ public class Problem41 extends GraphicsProgram {
 		int x = centerX - RADIUS;
 		int y = centerY - RADIUS;
 		add(brush, x, y);
-	}
+	} */
 }
