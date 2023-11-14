@@ -30,8 +30,8 @@ public class Problem43 extends GraphicsProgram {
 
 	@Override
 	public void mouseDragged(MouseEvent e) {
-		GObject obj = getElementAt(e.getX(), e.getY());
-		if (obj != null) {
+	//	GObject obj = getElementAt(e.getX(), e.getY());
+		if (lastPressed != null) {
 			// move object
 			lastPressed.move(e.getX() - prevX, e.getY() - prevY);
 			prevX = e.getX();
