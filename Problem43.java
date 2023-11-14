@@ -9,6 +9,7 @@ public class Problem43 extends GraphicsProgram {
 	private GOval circle;
 	private int prevX;
 	private int prevY;
+	private GObject lastPressed;
 
 	public void run() {
 		circle = new GOval(2 * RADIUS, 2 * RADIUS);
@@ -20,6 +21,7 @@ public class Problem43 extends GraphicsProgram {
 	@Override
 	public void mousePressed(MouseEvent e) {
 		GObject obj = getElementAt(e.getX(), e.getY());
+		lastPressed = obj;
 		if (obj != null) {
 			prevX = e.getX();
 			prevY = e.getY();
@@ -31,7 +33,7 @@ public class Problem43 extends GraphicsProgram {
 		GObject obj = getElementAt(e.getX(), e.getY());
 		if (obj != null) {
 			// move object
-			obj.move(e.getX() - prevX, e.getY() - prevY);
+			lastPressed.move(e.getX() - prevX, e.getY() - prevY);
 			prevX = e.getX();
 			prevY = e.getY();
 		}
