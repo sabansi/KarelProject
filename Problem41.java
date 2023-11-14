@@ -30,5 +30,5 @@ public class Problem41 extends GraphicsProgram {
 		int x = centerX - RADIUS;
 		int y = centerY - RADIUS;
 		add(brush, x, y);
-	} 
+	}
 }
