@@ -8,7 +8,6 @@ public class Problem41 extends GraphicsProgram {
 	public void run() {
 		addMouseListeners();
 	}
-}
 	@Override
 	public void mouseDragged(MouseEvent e) {
 		GOval brush = new GOval(2 * RADIUS, 2 * RADIUS);
