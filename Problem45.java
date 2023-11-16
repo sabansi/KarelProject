@@ -10,7 +10,7 @@ public class Problem45 extends ConsoleProgram{
 				answer++;
 			}
 		}
-		println("there are " + answer + " " + inputSymb + "s in your word");
+		println("there are " + answer + " " + inputSymb + "-s in your word");
 	}
 
 }
