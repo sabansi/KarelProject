@@ -5,7 +5,7 @@ public class Problem46 extends ConsoleProgram {
 		int countMax = 0;
 		int countIndex = 0;
 		String input = readLine("Enter a word: ");
-		char answer = ';
+		char answer = input.charAt(0);
 		for (int i = 0; i < input.length(); i++) {
 			for (int j = 0; j < input.length(); j++) {
 				if (input.charAt(i) == input.charAt(j) && i != j) {
