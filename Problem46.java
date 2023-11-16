@@ -17,7 +17,6 @@ public class Problem46 extends ConsoleProgram {
 				answer = input.charAt(i);
 			}
 		}
-
-		println(answer);
+		println("The most frequent character in the word is: " + answer);
 	}
 }
