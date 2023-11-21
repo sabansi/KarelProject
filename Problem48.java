@@ -7,16 +7,23 @@ public class Problem48 extends ConsoleProgram {
 	}
 
 	private void printCharStatistics(String text) {
-		for(int i = 0; i< text.length(); i++) {
-			int count = countSymbol(text, text.charAt(i));
-			println(text.charAt(i) + ": " + count);
+		for (int i = 0; i < text.length(); i++) {
+			char currCh = text.charAt(i);
+			if (isFirstOccurence(text, i)) {
+				int count = countSymbol(text, currCh);
+				println(currCh + ": " + count);
+			}
 		}
 	}
-	
+
+	private boolean isFirstOccurence(String text, int index) {
+		return(text.indexOf(text.charAt(index)) == index);
+	}
+
 	private int countSymbol(String text, char symbol) {
 		int symbolCount = 0;
-		for(int i = 0; i < text.length(); i++) {
-			if(text.charAt(i) == symbol) {
+		for (int i = 0; i < text.length(); i++) {
+			if (text.charAt(i) == symbol) {
 				symbolCount++;
 			}
 		}
