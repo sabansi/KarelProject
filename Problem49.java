@@ -4,7 +4,7 @@ public class Problem49 extends ConsoleProgram {
 	public void run() {
 		String input = readLine("Enter a number as a string: ");
 		int num = stringToInt(input);
-		println(num-2);
+		println(num);
 	}
 
 	private int stringToInt(String input) {
