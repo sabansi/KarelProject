@@ -9,7 +9,7 @@ public class Problem49 extends ConsoleProgram {
 
 	private int stringToInt(String input) {
 		int num = 0;
-		for(int i = 0; i < input.length(); i++) {
+		for (int i = 0; i < input.length(); i++) {
 			char currCh = input.charAt(i);
 			int currNm = currCh - '0';
 			num = num * 10 + currNm;
