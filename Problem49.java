@@ -2,7 +2,7 @@ import acm.program.ConsoleProgram;
 
 public class Problem49 extends ConsoleProgram {
 	public void run() {
-		String input = readLine("Enter a word: ");
+		String input = readLine("Enter a number as a string: ");
 		int num = stringToInt(input);
 		println(num);
 	}
