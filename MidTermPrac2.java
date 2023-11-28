@@ -14,7 +14,7 @@ public class MidTermPrac2 extends ConsoleProgram {
 		String lowerText = "";
 		int count = 0;
 		for (int i = 0; i < text.length(); i++) {
-			if (Character.isLowerCase(text.charAt(i))) {
+			if (Character.isLowerCase(text.charAt(i)) && Character.isLetter(text.charAt(i))) {
 				lowerText += text.charAt(i);
 			}
 		}
