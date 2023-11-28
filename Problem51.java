@@ -8,8 +8,7 @@ public class Problem51 extends ConsoleProgram{
 	}
 	
 	private String removeDuplicates(String text) {
-		text.replace("i", "");
-		println(text.replace("i", ""));
+		println(text.replace("ba", "BA"));
 		return text;
 	}
 }
