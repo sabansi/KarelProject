@@ -12,21 +12,14 @@ public class MidTermManipualtion extends ConsoleProgram {
 	}
 
 	private boolean checkSplit(String text1, String text2) {
-		int count = 0;
-		int lastInd = -1;
-		for (int i = 0; i < text2.length(); i++) {
-			for (int j = lastInd + 1; j < text1.length(); j++) {
-				if (text2.charAt(i) == text1.charAt(j)) {
-					lastInd = j;
-					count++;
-					break;
-				}
-			}
+		String splitText1 = "";
+		String splitText2 = "";
+		for(int i = 0; i < text1.length(); i++) {
+			splitText1 = text1.substring(0, i +1);
+			splitText2 = text1.substring(i+1);
 		}
-		if (count == text2.length()) {
-			return true;
-		}
+		println(splitText1);
+		println(splitText2);
 		return false;
 	}
-
 }
