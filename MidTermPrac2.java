@@ -18,7 +18,7 @@ public class MidTermPrac2 extends ConsoleProgram {
 				lowerText += text.charAt(i);
 			}
 		}
-		for (int i = 0; i < lowerText.length(); i++) {
+		for (int i = 0; i < lowerText.length() - 1; i++) {
 			if ((lowerText.charAt(i) < lowerText.charAt(i + 1)) && (i != lowerText.length() - 2)) {
 				count++;
 			}
@@ -29,3 +29,7 @@ public class MidTermPrac2 extends ConsoleProgram {
 		return false;
 	}
 }
+
+
+/*s a b a
+0 1 2 3 */
