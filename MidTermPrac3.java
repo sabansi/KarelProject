@@ -23,7 +23,6 @@ public class MidTermPrac3 extends ConsoleProgram {
 				}
 			}
 		}
-		println(count);
 		if (count == text2.length()) {
 			return true;
 		}
