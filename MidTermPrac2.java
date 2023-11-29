@@ -23,6 +23,7 @@ public class MidTermPrac2 extends ConsoleProgram {
 				count++;
 			}
 		} 
+		println(count);
 		if (count == lowerText.length() - 1) {
 			return true;
 		}
