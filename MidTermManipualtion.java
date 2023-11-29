@@ -16,7 +16,7 @@ public class MidTermManipualtion extends ConsoleProgram {
 	private boolean checkSplit(String text1, String text2) {
 		String splitText1 = "";
 		String splitText2 = "";
-		for(int i = 0; i < 2; i++) {
+		for(int i = 0; i < text1.length(); i++) {
 			splitText1 = text1.substring(0, i +1);
 			splitText2 = text1.substring(i+1);
 			for(int j = 0; j < splitText1.length(); j++) {
