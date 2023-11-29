@@ -16,7 +16,7 @@ public class MidTermPrac3 extends ConsoleProgram {
 		int lastInd = 0;
 		boolean occ = false;
 		for (int i = 0; i < text2.length(); i++) {
-			for (int j = 0; j < text1.length(); j++) {
+			for (int j = lastInd; j < text1.length(); j++) {
 				if (text2.charAt(i) == text1.charAt(j)) {
 					lastInd = j;
 					count++;
