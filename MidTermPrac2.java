@@ -22,17 +22,10 @@ public class MidTermPrac2 extends ConsoleProgram {
 			if ((lowerText.charAt(i) < lowerText.charAt(i + 1))) {
 				count++;
 			}
-		} 
-		
-//		b  c d
+		}
 		if (count == lowerText.length() - 1) {
 			return true;
 		}
 		return false;
 	}
 }
-
-
-
-/*s a b a
-0 1 2 3 */
