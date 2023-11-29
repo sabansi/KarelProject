@@ -19,11 +19,11 @@ public class MidTermPrac2 extends ConsoleProgram {
 			}
 		}
 		println(lowerText);
-		for (int i = 0; i < lowerText.length(); i++) {
+	/*	for (int i = 0; i < lowerText.length(); i++) {
 			if (lowerText.charAt(i) < lowerText.charAt(i + 1)) {
 				count++;
 			}
-		}
+		} */
 		if (count == lowerText.length() - 1) {
 			return true;
 		}
