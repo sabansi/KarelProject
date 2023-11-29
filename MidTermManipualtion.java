@@ -17,9 +17,10 @@ public class MidTermManipualtion extends ConsoleProgram {
 		for(int i = 0; i < text1.length(); i++) {
 			splitText1 = text1.substring(0, i +1);
 			splitText2 = text1.substring(i+1);
+			println(splitText1);
+			println(splitText2);
 		}
-		println(splitText1);
-		println(splitText2);
+		
 		return false;
 	}
 }
