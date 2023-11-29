@@ -26,6 +26,7 @@ public class MidTermPrac3 extends ConsoleProgram {
 			//iiyo 	if(occ == true) break;
 			}
 		}
+		println(count);
 		if (count == text2.length()) {
 			return true;
 		}
