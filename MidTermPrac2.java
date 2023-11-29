@@ -18,12 +18,11 @@ public class MidTermPrac2 extends ConsoleProgram {
 				lowerText += text.charAt(i);
 			}
 		}
-		println(lowerText);
-	/*	for (int i = 0; i < lowerText.length(); i++) {
-			if (lowerText.charAt(i) < lowerText.charAt(i + 1)) {
+		for (int i = 0; i < lowerText.length(); i++) {
+			if ((lowerText.charAt(i) < lowerText.charAt(i + 1)) && (i != lowerText.length() - 1)) {
 				count++;
 			}
-		} */
+		} 
 		if (count == lowerText.length() - 1) {
 			return true;
 		}
