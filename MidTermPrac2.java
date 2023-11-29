@@ -23,13 +23,15 @@ public class MidTermPrac2 extends ConsoleProgram {
 				count++;
 			}
 		} 
-		println(count);
+		if('b'<'c')
+			println('3');
 		if (count == lowerText.length() - 1) {
 			return true;
 		}
 		return false;
 	}
 }
+
 
 
 /*s a b a
