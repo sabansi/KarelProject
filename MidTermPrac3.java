@@ -15,7 +15,7 @@ public class MidTermPrac3 extends ConsoleProgram {
 	private boolean checkSplit(String text1, String text2) {
 		int count = 0;
 		for(int i = 0; i < text2.length(); i++) {
-			for(int j = 0; j < text1.length(); j++) {
+			for(int j = i; j < text1.length(); j++) {
 				if(text2.charAt(i) == text1.charAt(j)) {
 					count++;
 					break;
