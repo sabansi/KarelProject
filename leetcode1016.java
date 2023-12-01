@@ -51,17 +51,16 @@ public class leetcode1016 extends GraphicsProgram {
             if (x1 > x2) {
                 if (score > 0) {
                     score--;
-                    updateScoreLabel();
                     scoreUpdated = true;
                 }
             } else if (x1 < x2) {
                 if (score < 9) {
                     score++;
-                    updateScoreLabel();
+
                     scoreUpdated = true;
                 }
             }
-
+            updateScoreLabel();
             x1 = x2;
         }
     }
