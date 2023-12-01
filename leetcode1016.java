@@ -56,6 +56,7 @@ public class leetcode1016 extends GraphicsProgram {
 
 		circle = new GOval(x, y, newRadius * 2, newRadius * 2);
 		circle.setFilled(true);
+		circleColor = rand.nextColor();
 		circle.setFillColor(circleColor);
 		add(circle);
 	}
