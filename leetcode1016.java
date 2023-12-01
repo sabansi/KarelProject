@@ -58,6 +58,7 @@ public class leetcode1016 extends GraphicsProgram {
             }
 
             x1 = x2;
+            y1 = y2;
         }
     }
 
