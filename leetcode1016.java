@@ -20,7 +20,7 @@ public class leetcode1016 extends ConsoleProgram {
 			}
 
 		}
-		int binary = Integer.parseInt(numb, 3);
+		int binary = Integer.parseInt(numb, 2);
 		return binary;
 	}
 }
