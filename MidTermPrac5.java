@@ -21,7 +21,7 @@ public class MidTermPrac5 extends ConsoleProgram {
 			}
 		}
 		if (newStr.length() <= 6) {
-			for(int i = 0; i < newStr.length(); i++) {
+			for(int i = 0; i < newStr.length() - 1; i++) {
 				if(newStr.charAt(i) < newStr.charAt(i+1)) {
 					count1++;
 				}
