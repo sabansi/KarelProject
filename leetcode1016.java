@@ -53,7 +53,7 @@ public class leetcode1016 extends GraphicsProgram {
 		remove(circle);
 
 		circle = new GOval(x, y, newRadius * 2, newRadius * 2);
-	//	circle.setFilled(true);
+		circle.setFilled(true);
 		circle.setFillColor(circleColor);
 		add(circle);
 	}
