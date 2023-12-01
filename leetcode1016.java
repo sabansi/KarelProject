@@ -25,7 +25,7 @@ public class leetcode1016 extends GraphicsProgram {
 
         String labelText = Integer.toString(score);
         text = new GLabel(labelText);
-        double x2 = x1 + BOX_SIZE / 2 - text.getWidth() / 2;
+        double x2 = x1 + BOX_SIZE / 2 + text.getWidth() / 2;
         double y2 = y1 + BOX_SIZE / 2 + text.getAscent() / 2;
         add(text, x2, y2);
     }
