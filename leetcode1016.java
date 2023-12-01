@@ -13,7 +13,7 @@ public class leetcode1016 extends GraphicsProgram {
 
     private GOval circle;
     private Color circleColor; // Store the original color
-    private boolean mousePressed = false;
+    private boolean mousePressed = true;
 
     public void run() {
         drawCircle(CIRCLE_D / 2);
