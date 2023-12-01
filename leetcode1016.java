@@ -34,21 +34,28 @@ public class leetcode1016 extends GraphicsProgram {
 	    double y1 = e.getY();
 	    double x2 = getWidth() / 2;
 	    double y2 = getHeight() / 2;
-	    
+
 	    // Calculate the distance between the mouse click point and the center of the circle
 	    double distance = Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
 
-	    // Calculate the change in radius based on the distance
-	    double radiusChange = 5 * (CIRCLE_D / 2) / getWidth(); // You can adjust the factor as needed
-	    
-	    // Check if the mouse is approaching the center or the canvas borders
-	    if (distance < CIRCLE_D / 2) {
-	        // Approaching the center, decrease the radius
-	        drawCircle(circle.getWidth() / 2 - radiusChange);
-	    } else {
-	        // Approaching the canvas borders, increase the radius
-	        drawCircle(circle.getWidth() / 2 + radiusChange);
-	    }
+	    // Calculate the new radius based on the distance
+	    double newRadius = Math.max(5, distance);
+
+	    // Update the circle's radius
+	    updateCircleRadius(newRadius);
 	}
+
+	private void updateCircleRadius(double newRadius) {
+	    double x = getWidth() / 2 - newRadius;
+	    double y = getHeight() / 2 - newRadius;
+
+	    // Remove the old circle
+	    remove(circle);
+
+	    // Create and add the new circle with the updated radius
+	    circle = new GOval(x, y, newRadius * 2, newRadius * 2);
+	    add(circle);
+	}
+
 
 }
