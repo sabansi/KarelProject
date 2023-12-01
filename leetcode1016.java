@@ -18,6 +18,7 @@ public class leetcode1016 extends GraphicsProgram {
     }
 
     private void draw() {
+    	addMouseListeners();
         double x11 = getWidth() / 2 - BOX_SIZE / 2;
         double y11 = getHeight() / 2 - BOX_SIZE / 2;
         square = new GRect(x11, y11, BOX_SIZE, BOX_SIZE);
@@ -32,7 +33,6 @@ public class leetcode1016 extends GraphicsProgram {
 
     public void mousePressed(MouseEvent e) {
         x1 = e.getX();
-        y1 = e.getY();
         prevX1 = x1;
     }
 
