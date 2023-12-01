@@ -33,6 +33,8 @@ public class MidTermPrac5 extends ConsoleProgram {
 						count2++;
 					}
 				}
+				println(count1);
+				println(count2);
 				if(count2 == count1 + 1) {
 					return true;
 				}
