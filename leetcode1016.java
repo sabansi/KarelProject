@@ -21,6 +21,7 @@ public class leetcode1016 extends GraphicsProgram {
 		double x = getWidth() / 2 - CIRCLE_D / 2;
 		double y = getHeight() / 2 - CIRCLE_D / 2;
 		circle = new GOval(x, y, CIRCLE_D, CIRCLE_D);
+		add(circle);
 	}
 	
 	public void mouseClicked(MouseEvent e) {
