@@ -13,6 +13,7 @@ public class leetcode1016 extends ConsoleProgram{
 	}
 	private int binaryConvert(String numb) {
 		int binary = Integer.parseInt(numb);
+		println(binary);
 		return binary;
 	}
 }
