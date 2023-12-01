@@ -13,7 +13,7 @@ public class leetcode1016 extends GraphicsProgram {
 	private static final int BOX_SIZE = 80;
 	private GRect square;
 	private GLabel text;
-	private String score;
+	private String score = "0";
 	public void run() {
 		draw();
 	}
