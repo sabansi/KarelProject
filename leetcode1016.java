@@ -18,7 +18,7 @@ public class leetcode1016 extends GraphicsProgram{
 	while(true) {
 		Color c = rgen.nextColor();
 		oval.setFillColor(c);
-		if (oval.getFillColor().equals(Color.GREEN)) break;
+		if (oval.getFillColor().equals(Color.BLUE)) break;
 		pause(DELAY);
 }
 	}
