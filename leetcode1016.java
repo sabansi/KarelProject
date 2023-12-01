@@ -56,7 +56,6 @@ public class leetcode1016 extends GraphicsProgram{
 	}
 	@Override
 	public void mouseClicked(MouseEvent e){
-	//	if(oval1 == null && oval2 == null) return;
 		if (oval1 == null) {
 			oval1 = (GOval) getElementAt(e.getX(),e.getY());
 		}
