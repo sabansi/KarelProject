@@ -12,7 +12,8 @@ public class leetcode1016 extends GraphicsProgram {
 	private final static int CIRCLE_D = 40;
 	
 	private GOval circle;
-	private Color circleColor; // Store the original color
+	private Color circleColor;
+	private Color currColor;
 	
 	public void run() {
 		drawCircle(CIRCLE_D / 2);
@@ -40,6 +41,7 @@ public class leetcode1016 extends GraphicsProgram {
 		double x2 = getWidth() / 2;
 		double y2 = getHeight() / 2;
 		
+		currColor = circleColor;
 
 		double newRadius = Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
 
@@ -56,8 +58,7 @@ public class leetcode1016 extends GraphicsProgram {
 
 		circle = new GOval(x, y, newRadius * 2, newRadius * 2);
 		circle.setFilled(true);
-		circleColor = rand.nextColor();
-		circle.setFillColor(circleColor);
+		circle.setFillColor(currColor);
 		add(circle);
 	}
 }
