@@ -23,15 +23,13 @@ public class leetcode1016 extends GraphicsProgram {
 		double x = getWidth() / 2 - radius;
 		double y = getHeight() / 2 - radius;
 		circle = new GOval(x, y, radius * 2, radius * 2);
-//		circleColor = rand.nextColor(); // Store the original color
 		circle.setFilled(true);
-//		circle.setFillColor(circleColor);
 		add(circle);
 	}
 	
 	public void mouseClicked(MouseEvent e) {
 		circle.setFilled(true);
-		circle.setFillColor(circleColor=rand.nextColor());
+		circle.setFillColor(circleColor = rand.nextColor());
 	}
 	
 	public void mouseDragged(MouseEvent e) {
@@ -55,7 +53,7 @@ public class leetcode1016 extends GraphicsProgram {
 		remove(circle);
 
 		circle = new GOval(x, y, newRadius * 2, newRadius * 2);
-		circle.setFilled(true);
+	//	circle.setFilled(true);
 		circle.setFillColor(circleColor);
 		add(circle);
 	}
