@@ -42,7 +42,7 @@ public class leetcode1016 extends GraphicsProgram {
     }
 
     public void mouseDragged(MouseEvent e) {
-        if (mousePressed) {
+        if (!mousePressed) {
             double x1 = e.getX();
             double y1 = e.getY();
             double x2 = getWidth() / 2;
