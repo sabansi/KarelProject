@@ -13,12 +13,13 @@ public class leetcode1016 extends ConsoleProgram{
 	}
 	private int binaryConvert(String numb) {
 		for(int i = 0; i < numb.length(); i++) {
-			if(numb.charAt(i) == '0') {
-				numb = numb.replace(numb.charAt(i)+"", "");
-			}
-			else if(numb.charAt(i) == '1'){
+			if(numb.charAt(i) == '1'){
 				break;
 			}
+			else if(numb.charAt(i) == '0') {
+				numb = numb.replace(numb.charAt(i)+"", "");
+			}
+			
 		}
 		int binary = Integer.parseInt(numb);
 		println(binary);
