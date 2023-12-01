@@ -20,6 +20,7 @@ public class MidTermPrac5 extends ConsoleProgram {
 				newStr += s.charAt(i);
 			}
 		}
+		println(newStr);
 		if (newStr.length() <= 6) {
 			for(int i = 0; i < newStr.length() - 1; i++) {
 				if(newStr.charAt(i) < newStr.charAt(i+1)) {
