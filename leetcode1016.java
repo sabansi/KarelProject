@@ -1,26 +1,28 @@
-import acm.program.ConsoleProgram;
+import acm.graphics.GOval;
+import acm.program.GraphicsProgram;
+import acm.util.RandomGenerator;
 
-public class leetcode1016 extends ConsoleProgram {
+public class leetcode1016 extends GraphicsProgram {
+	
+	RandomGenerator rand = RandomGenerator.getInstance();
+	
+	private final static int CIRCLE_D = 40;
+	
+	private GOval circle;
+	
 	public void run() {
-		String numb = readLine();
-		int n = readInt();
-		if (binaryConvert(numb) == n) {
-			println("true");
-		} else {
-			println("false");
-		}
+		drawCircle();
+		addMouseListeners();
 	}
 
-	private int binaryConvert(String numb) {
-		for (int i = 0; i < numb.length(); i++) {
-			if (numb.charAt(i) == '1') {
-				break;
-			} else if (numb.charAt(i) == '0') {
-				numb = numb.replace(numb.charAt(i) + "", "");
-			}
-
-		}
-		int binary = Integer.parseInt(numb, 2);
-		return binary;
+	private void drawCircle() {
+		double x = getWidth() / 2 - CIRCLE_D / 2;
+		double y = getHeight() / 2 - CIRCLE_D / 2;
+		circle = new GOval(x, y, CIRCLE_D, CIRCLE_D);
+	}
+	
+	public void mouseClicked() {
+		circle.setFilled(true);
+		circle.setFillColor(rand.nextColor());
 	}
 }
