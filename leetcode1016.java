@@ -29,7 +29,7 @@ public class leetcode1016 extends GraphicsProgram {
     }
 
     private void updateScoreLabel() {
-        text = new GLabel(Integer.toString(score), getWidth() / 2 - BOX_SIZE / 4, getHeight() / 2);
+        text = new GLabel(Integer.toString(score), getWidth() / 2 - BOX_SIZE / 2, getHeight() / 2);
         add(text);
     }
 }
