@@ -22,7 +22,6 @@ public class leetcode1016 extends ConsoleProgram{
 			
 		}
 		int binary = Integer.parseInt(numb, 2);
-		println(binary);
 		return binary;
 	}
 }
