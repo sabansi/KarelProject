@@ -20,27 +20,24 @@ public class MidTermPrac5 extends ConsoleProgram {
 				newStr += s.charAt(i);
 			}
 		}
-		println(newStr);
 		if (newStr.length() <= 6) {
-			for(int i = 0; i < newStr.length() - 1; i++) {
-				if(newStr.charAt(i) < newStr.charAt(i+1)) {
+			for (int i = 0; i < newStr.length() - 1; i++) {
+				if (newStr.charAt(i) < newStr.charAt(i + 1)) {
 					count1++;
 				}
 			}
-			if(count1 == newStr.length() - 1) {
-				for(int i = 0; i < newStr.length(); i++) {
+			if (count1 == newStr.length() - 1) {
+				for (int i = 0; i < newStr.length(); i++) {
 					char ch = newStr.charAt(i);
-					if(newStr.indexOf(ch) == i) {
+					if (newStr.indexOf(ch) == i) {
 						count2++;
 					}
 				}
-				println(count1);
-				println(count2);
-				if(count2 == count1 + 1) {
+				if (count2 == count1 + 1) {
 					return true;
 				}
 			}
-		} 
+		}
 
 		return false;
 	}
