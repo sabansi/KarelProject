@@ -1,3 +1,5 @@
+import java.awt.event.MouseEvent;
+
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
@@ -21,7 +23,7 @@ public class leetcode1016 extends GraphicsProgram {
 		circle = new GOval(x, y, CIRCLE_D, CIRCLE_D);
 	}
 	
-	public void mouseClicked() {
+	public void mouseClicked(MouseEvent e) {
 		circle.setFilled(true);
 		circle.setFillColor(rand.nextColor());
 	}
