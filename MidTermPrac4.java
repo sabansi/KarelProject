@@ -52,6 +52,10 @@ public class MidTermPrac4 extends GraphicsProgram{
 		}
 		else {
 			currRect.setFillColor(Color.WHITE);
+			if (currRect == firstBlack) {
+				firstBlack = secondBlack;
+			}
+			secondBlack = null;
 		}
 	}
 }
