@@ -12,6 +12,14 @@ public class leetcode1016 extends ConsoleProgram{
 		}
 	}
 	private int binaryConvert(String numb) {
+		for(int i = 0; i < numb.length(); i++) {
+			if(numb.charAt(i) == '0') {
+				numb = numb.replace(numb.charAt(i)+"", "");
+			}
+			else {
+				break;
+			}
+		}
 		int binary = Integer.parseInt(numb);
 		println(binary);
 		return binary;
