@@ -28,7 +28,7 @@ public class leetcode1016 extends GraphicsProgram {
         add(text, x2, y2);
     }
 
-    public void mouseDragged(MouseEvent e) {
+    public void mousePressed(MouseEvent e) {
         double mouseX = e.getX();
         double mouseY = e.getY();
 
