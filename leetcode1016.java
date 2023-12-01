@@ -11,7 +11,6 @@ public class leetcode1016 extends GraphicsProgram {
     private int score = 0;
     private double x1 = 0;
     private double y1 = 0;
-    private boolean scoreUpdated = false;
 
     public void run() {
         draw();
@@ -39,29 +38,24 @@ public class leetcode1016 extends GraphicsProgram {
             x1 = 0;
             y1 = 0;
         }
-
-        scoreUpdated = false;
     }
 
-    public void mouseDragged(MouseEvent e) {
+    public void mouseReleased(MouseEvent e) {
         double x2 = e.getX();
         double y2 = e.getY();
 
-        if (isMouseInsideSquare(x2, y2) && !scoreUpdated) {
+        if (isMouseInsideSquare(x2, y2)) {
             if (x1 > x2) {
                 if (score > 0) {
                     score--;
-                    scoreUpdated = true;
                 }
             } else if (x1 < x2) {
                 if (score < 9) {
                     score++;
-
-                    scoreUpdated = true;
                 }
             }
+
             updateScoreLabel();
-            x1 = x2;
         }
     }
 
