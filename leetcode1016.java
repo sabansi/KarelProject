@@ -14,11 +14,11 @@ public class leetcode1016 extends ConsoleProgram{
 	private int binaryConvert(String numb) {
 		for(int i = 0; i < numb.length(); i++) {
 			if(numb.charAt(i) == '1'){
-				int binary = Integer.parseInt(numb);
-				return binary;
+				break;
 			}
 			else if(numb.charAt(i) == '0') {
 				numb = numb.replace(numb.charAt(i)+"", "");
+				i--;
 			}
 			
 		}
