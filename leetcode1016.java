@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.event.MouseEvent;
 
 import acm.graphics.GOval;
@@ -11,6 +12,7 @@ public class leetcode1016 extends GraphicsProgram {
 	private final static int CIRCLE_D = 40;
 	
 	private GOval circle;
+	private Color circleColor; // Store the original color
 	
 	public void run() {
 		drawCircle(CIRCLE_D / 2);
@@ -20,7 +22,10 @@ public class leetcode1016 extends GraphicsProgram {
 	private void drawCircle(double radius) {
 		double x = getWidth() / 2 - radius;
 		double y = getHeight() / 2 - radius;
-		circle = new GOval(x, y, CIRCLE_D, CIRCLE_D);
+		circle = new GOval(x, y, radius * 2, radius * 2);
+		circleColor = rand.nextColor(); // Store the original color
+		circle.setFilled(true);
+		circle.setFillColor(circleColor);
 		add(circle);
 	}
 	
@@ -30,32 +35,32 @@ public class leetcode1016 extends GraphicsProgram {
 	}
 	
 	public void mouseDragged(MouseEvent e) {
-	    double x1 = e.getX();
-	    double y1 = e.getY();
-	    double x2 = getWidth() / 2;
-	    double y2 = getHeight() / 2;
+		double x1 = e.getX();
+		double y1 = e.getY();
+		double x2 = getWidth() / 2;
+		double y2 = getHeight() / 2;
+		
+		// Calculate the distance between the mouse click point and the center of the circle
+		double distance = Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
 
-	    // Calculate the distance between the mouse click point and the center of the circle
-	    double distance = Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+		// Calculate the new radius based on the distance
+		double newRadius = Math.max(5, distance);
 
-	    // Calculate the new radius based on the distance
-	    double newRadius = Math.max(5, distance);
-
-	    // Update the circle's radius
-	    updateCircleRadius(newRadius);
+		// Update the circle's radius without changing the color
+		updateCircleRadius(newRadius);
 	}
 
 	private void updateCircleRadius(double newRadius) {
-	    double x = getWidth() / 2 - newRadius;
-	    double y = getHeight() / 2 - newRadius;
+		double x = getWidth() / 2 - newRadius;
+		double y = getHeight() / 2 - newRadius;
 
-	    // Remove the old circle
-	    remove(circle);
+		// Remove the old circle
+		remove(circle);
 
-	    // Create and add the new circle with the updated radius
-	    circle = new GOval(x, y, newRadius * 2, newRadius * 2);
-	    add(circle);
+		// Create and add the new circle with the updated radius and original color
+		circle = new GOval(x, y, newRadius * 2, newRadius * 2);
+		circle.setFilled(true);
+		circle.setFillColor(circleColor);
+		add(circle);
 	}
-
-
 }
