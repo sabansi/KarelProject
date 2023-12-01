@@ -17,14 +17,13 @@ public class leetcode1016 extends GraphicsProgram {
     private void draw() {
         double x1 = getWidth() / 2 - BOX_SIZE / 2;
         double y1 = getHeight() / 2 - BOX_SIZE / 2;
-
-        // Create the square
         square = new GRect(x1, y1, BOX_SIZE, BOX_SIZE);
         add(square);
 
-        // Create and add the text label to the middle of the square
         String labelText = Integer.toString(score);
-        text = new GLabel(labelText, x1 + BOX_SIZE / 2 - text.getWidth() / 2, y1 + BOX_SIZE / 2 + text.getAscent() / 2);
-        add(text);
+        text = new GLabel(labelText);
+        double x2 = x1 + BOX_SIZE / 2 - text.getWidth() / 2;
+        double y2 = y1 + BOX_SIZE / 2 + text.getAscent() / 2;
+        add(text, x2, y2);
     }
 }
