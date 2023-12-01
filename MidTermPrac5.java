@@ -18,12 +18,13 @@ public class MidTermPrac5 extends ConsoleProgram {
 				newStr += s.charAt(i);
 			}
 		}
-		if (newStr.length() == 6) {
+	/*	if (newStr.length() == 6) {
 			if (newStr.charAt(0) == 'a' && newStr.charAt(1) == 'e' && newStr.charAt(2) == 'i' && newStr.charAt(3) == 'o'
 					&& newStr.charAt(4) == 'u' && newStr.charAt(5) == 'y') {
 				return true;
 			}
-		}
+		} */
+		println(newStr);
 		return false;
 	}
 }
