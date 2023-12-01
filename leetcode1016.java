@@ -24,7 +24,7 @@ public class leetcode1016 extends GraphicsProgram {
 		add(circle);
 	}
 	
-	public void mouseClicked() {
+	public void mouseClicked(MouseEvent e) {
 		circle.setFilled(true);
 		circle.setFillColor(rand.nextColor());
 	}
