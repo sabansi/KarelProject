@@ -9,6 +9,8 @@ public class leetcode1016 extends GraphicsProgram {
     private GRect square;
     private GLabel text;
     private int score = 0;
+    private double x1 = 0;
+    private double y1 = 0;
 
     public void run() {
         draw();
@@ -16,47 +18,59 @@ public class leetcode1016 extends GraphicsProgram {
 
     private void draw() {
         addMouseListeners();
-        double x1 = getWidth() / 2 - BOX_SIZE / 2;
-        double y1 = getHeight() / 2 - BOX_SIZE / 2;
-        square = new GRect(x1, y1, BOX_SIZE, BOX_SIZE);
+        double x = getWidth() / 2 - BOX_SIZE / 2;
+        double y = getHeight() / 2 - BOX_SIZE / 2;
+        square = new GRect(x, y, BOX_SIZE, BOX_SIZE);
         add(square);
 
         String labelText = Integer.toString(score);
         text = new GLabel(labelText);
-        double x2 = x1 + BOX_SIZE / 2 - text.getWidth() / 2;
-        double y2 = y1 + BOX_SIZE / 2 + text.getAscent() / 2;
+        double x2 = x + BOX_SIZE / 2 - text.getWidth() / 2;
+        double y2 = y + BOX_SIZE / 2 + text.getAscent() / 2;
         add(text, x2, y2);
     }
 
-    public void mouseClicked(MouseEvent e) {
-        double mouseX = e.getX();
-        double mouseY = e.getY();
+    public void mousePressed(MouseEvent e) {
+        x1 = e.getX();
+        y1 = e.getY();
 
-        if (isMouseInsideBox(mouseX, mouseY)) {
-            if (mouseX > square.getX() + square.getWidth() / 2) {
+        if (!isMouseInsideSquare(x1, y1)) {
+            x1 = 0;
+            y1 = 0;
+        }
+    }
+
+    public void mouseDragged(MouseEvent e) {
+        double x2 = e.getX();
+        double y2 = e.getY();
+
+        if (isMouseInsideSquare(x2, y2)) {
+            if (x1 > x2) {
                 if (score > 0) {
                     score--;
                     updateScoreLabel();
                 }
-            } else {
+            } else if (x1 < x2) {
                 if (score < 9) {
                     score++;
                     updateScoreLabel();
                 }
             }
+
+            x1 = x2;
         }
     }
 
-    private boolean isMouseInsideBox(double mouseX, double mouseY) {
-        return mouseX >= square.getX() && mouseX <= square.getX() + square.getWidth() &&
-               mouseY >= square.getY() && mouseY <= square.getY() + square.getHeight();
+    private boolean isMouseInsideSquare(double x, double y) {
+        return x >= square.getX() && x <= square.getX() + square.getWidth() &&
+               y >= square.getY() && y <= square.getY() + square.getHeight();
     }
 
     private void updateScoreLabel() {
         String labelText = Integer.toString(score);
-        double x2 = getWidth() / 2 - text.getWidth() / 2;
-        double y2 = getHeight() / 2 + text.getAscent() / 2;
+        double x = getWidth() / 2 - text.getWidth() / 2;
+        double y = getHeight() / 2 + text.getAscent() / 2;
         text.setLabel(labelText);
-        text.setLocation(x2, y2);
+        text.setLocation(x, y);
     }
 }
