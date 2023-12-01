@@ -18,7 +18,6 @@ public class leetcode1016 extends ConsoleProgram{
 			}
 			else if(numb.charAt(i) == '0') {
 				numb = numb.replace(numb.charAt(i)+"", "");
-				i--;
 			}
 			
 		}
