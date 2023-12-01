@@ -39,11 +39,12 @@ public class MidTermPrac3 extends ConsoleProgram {
 	private String removeChars(String text, char ch) {
 		String removed = "";
 		for(int i = 0; i < text.length(); i++) {
-			if(text.charAt(i) == ch) {
-				text = text.replace(text.charAt(i) + "", " ");
+			char currCh = text.charAt(i); 
+			if(currCh != ch) {
+				removed += currCh;
 			}
 		}
-		return text;
+		return removed;
 	}
 
 }
