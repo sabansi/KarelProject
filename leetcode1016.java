@@ -59,23 +59,19 @@ public class leetcode1016 extends GraphicsProgram {
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		if (oval1 == null && oval2 == null)
-			return;
-		else {
-			if (oval1 == null) {
-				oval1 = (GOval) getElementAt(e.getX(), e.getY());
-			} else if (oval2 == null) {
-				oval2 = (GOval) getElementAt(e.getX(), e.getY());
-			} else {
-				oval1 = oval2;
-				oval2 = (GOval) getElementAt(e.getX(), e.getY());
-			}
-			if (oval1 != null && oval2 != null) {
-				if (oval1.getColor() == oval2.getColor() && !oval1.equals(oval2)) {
-					remove(oval1);
-					remove(oval2);
-					count--;
-				}
+		if (oval1 == null) {
+			oval1 = (GOval) getElementAt(e.getX(), e.getY());
+		} else if (oval2 == null) {
+			oval2 = (GOval) getElementAt(e.getX(), e.getY());
+		} else {
+			oval1 = oval2;
+			oval2 = (GOval) getElementAt(e.getX(), e.getY());
+		}
+		if (oval1 != null && oval2 != null) {
+			if (oval1.getColor() == oval2.getColor() && !oval1.equals(oval2)) {
+				remove(oval1);
+				remove(oval2);
+				count--;
 			}
 		}
 	}
