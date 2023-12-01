@@ -23,8 +23,8 @@ public class leetcode1016 extends GraphicsProgram {
 		double x = getWidth() / 2 - radius;
 		double y = getHeight() / 2 - radius;
 		circle = new GOval(x, y, radius * 2, radius * 2);
-		circleColor = rand.nextColor(); // Store the original color
-//		circle.setFilled(true);
+//		circleColor = rand.nextColor(); // Store the original color
+		circle.setFilled(true);
 //		circle.setFillColor(circleColor);
 		add(circle);
 	}
