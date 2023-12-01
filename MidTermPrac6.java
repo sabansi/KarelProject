@@ -20,7 +20,7 @@ public class MidTermPrac6 extends GraphicsProgram {
 		prevPoint = new GPoint(e.getX(), e.getY());
 	}
 	
-	public void mouseDragged(MouseEvent e){
+	public void mouseReleased(MouseEvent e){
 		line.setEndPoint(e.getX(), e.getY());
 		prevPoint = new GPoint(e.getX(), e.getY());
 	}
