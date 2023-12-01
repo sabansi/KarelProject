@@ -41,7 +41,7 @@ public class leetcode1016 extends GraphicsProgram {
 		double x2 = getWidth() / 2;
 		double y2 = getHeight() / 2;
 		
-		currColor = circleColor;
+		currColor = rand.nextColor();
 
 		double newRadius = Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
 
