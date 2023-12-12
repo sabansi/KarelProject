@@ -7,7 +7,7 @@ public class Problem60 extends ConsoleProgram {
         int n = 0;
         ArrayList<Integer> arr = new ArrayList<Integer>();
         
-        while ((n = readInt("Enter a number:")) != -1) {
+        while ((n = readInt("Enter a number: ")) != -1) {
             arr.add(n);
         }
     
