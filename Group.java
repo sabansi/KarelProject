@@ -30,5 +30,10 @@ public class Group {
 		}
 		studentScores.put(student, score);
 	}
+	
+	public void addStudent(String student) {
+		if(!studentScores.containsKey(student))
+		studentScores.put(student, null);
+	}
 
 }
