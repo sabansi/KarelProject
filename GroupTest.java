@@ -13,7 +13,7 @@ public class GroupTest extends ConsoleProgram {
 		classB.setScore("sansi23", 15.0);
 		classB.setScore("akave23", 15.0);
 		println(classB.getScore("sansi23"));
-		println(classB.getScore("akave22"));
+		println(classB.getScore("akave23"));
 	}
 
 }
