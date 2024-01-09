@@ -4,7 +4,7 @@ import acm.program.ConsoleProgram;
 
 public class GroupTest extends ConsoleProgram{
 	public void run() { 
-		ArrayList<String> students = new ArrayList();
+		ArrayList<String> students = new ArrayList<>();
 		students.add("sansi23");
 		students.add("akave23");
 		Group classB = new Group(students);
