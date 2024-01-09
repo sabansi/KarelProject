@@ -14,6 +14,8 @@ public class GroupTest extends ConsoleProgram {
 		classB.setScore("akave23", 15.0);
 		println(classB.getScore("sansi23"));
 		println(classB.getScore("akave23"));
+		classB.addStudent("akave22");
+		println(classB.getScore("akave22"));
 	}
 
 }
