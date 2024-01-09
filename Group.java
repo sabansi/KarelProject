@@ -22,5 +22,13 @@ public class Group {
 		}
 		return studentScores.get(student);
 	}
+	
+	public void setScore(String student, double score) {
+		if(!studentScores.containsKey(student)) {
+			System.out.println("No such student: " + student);
+			return;
+		}
+		studentScores.put(student, score);
+	}
 
 }
