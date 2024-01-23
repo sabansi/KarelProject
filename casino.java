@@ -41,7 +41,7 @@ public class casino extends ConsoleProgram {
 	}
 
 	private int determineBetAmount(double currMoney, double lostMoney) {
-		if (lostMoney <= 0) {
+		if (lostMoney < 0) {
 			return 1;
 		} else if (currMoney >= (lostMoney + 1) / 36.0) {
 			return (int) ((lostMoney + 1) / 36.0);
