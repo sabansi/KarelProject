@@ -24,12 +24,14 @@ public class casino extends ConsoleProgram {
 
 				if (roulette == winner) {
 					currMoney += lostMoney + 1;
-					lostMoney -= betAmount; 
-					if(lostMoney < 0) lostMoney = 0;
+					lostMoney = 0;
 				} else {
 					currMoney -= betAmount;
 					lostMoney += betAmount;
 				}
+				//bet = 1 1/18 0
+				//cur = 44 43 45
+				//lost = 0 1 0
 				println(betAmount);
 				println(currMoney);
 				println(lostMoney);
