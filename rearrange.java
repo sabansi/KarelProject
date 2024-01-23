@@ -23,7 +23,7 @@ public class rearrange extends ConsoleProgram {
 		ArrayList<Integer> sortedKeys = new ArrayList<Integer>(map.keySet());
 		Collections.sort(sortedKeys);
 		for(Integer key : sortedKeys) {
-			println(map.get(key) + " ");
+			print(map.get(key) + " ");
 		}
 	}
 
