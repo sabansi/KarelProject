@@ -34,10 +34,10 @@ public class casino extends ConsoleProgram {
 				println("The numbers are: " + roulette + " " + winner);
 				println("lostmoney - " + lostMoney);
 				println("currmoney - " + currMoney);
-	//			println(rolls);
+
 				rolls++;
 			}
-
+			println(rolls);
 			totalRolls += rolls;
 		}
 		double averageRolls = (double) totalRolls / 1000;
