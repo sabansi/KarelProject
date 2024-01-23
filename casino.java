@@ -37,6 +37,7 @@ public class casino extends ConsoleProgram {
 
 				rolls++;
 			}
+			println("current rolls are: " + rolls);
 			totalRolls += rolls;
 		}
 		double averageRolls = (double) totalRolls / 2;
