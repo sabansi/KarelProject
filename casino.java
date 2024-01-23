@@ -12,11 +12,11 @@ public class casino extends ConsoleProgram {
 
 	private void simulations(int n) {
 		int middle = 0;
-		double currMoney = n;
 		for (int ind = 0; ind < 1000; ind++) {
 			double lostMoney = 0;
 			int rolls = 0;
 			double betMoney = 0;
+			double currMoney = n;
 			while (currMoney > 0) {
 				int roulette = rgen.nextInt(0, 36);
 				int winner = rgen.nextInt(0, 36);
@@ -39,7 +39,7 @@ public class casino extends ConsoleProgram {
 			}
 			middle += rolls;
 		}
-		double ans = middle / 1000;
+		double ans = (double) middle / 1000;
 		println(middle);
 	}
 }
