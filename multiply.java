@@ -17,7 +17,7 @@ public class multiply {
 
         // Print the result as a string
         System.out.println("Result: " + arrayListToString(result));
-    }
+    
 
     private static ArrayList<Integer> multiply(ArrayList<Integer> num1, ArrayList<Integer> num2) {
         int m = num1.size();
