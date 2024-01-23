@@ -25,7 +25,7 @@ public class rearrange extends ConsoleProgram {
 		for(int i = 0; i < pair.size() - 1; i++) {
 			int minIndex = i;
 			for(int j = i + 1; j < pair.size(); j++) {
-				if(pair.get(j).getKey() < pair.get(minIndex).getKey()) {
+				if(pair.get(j).getKey() <= pair.get(minIndex).getKey()) {
 					minIndex = j;
 				}
 			}
