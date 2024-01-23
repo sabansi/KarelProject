@@ -12,7 +12,7 @@ public class casino extends ConsoleProgram {
 	private void simulations(int n) {
 		int totalRolls = 0;
 
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 0; i < 1; i++) {
 			int rolls = 0;
 			double currMoney = n;
 			double lostMoney = 0;
