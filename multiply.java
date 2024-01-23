@@ -22,7 +22,8 @@ public class multiply {
     private static ArrayList<Integer> multiply(ArrayList<Integer> num1, ArrayList<Integer> num2) {
         int m = num1.size();
         int n = num2.size();
-        ArrayList<Integer> result = new ArrayList<>(m+n,0);
+        ArrayList<Integer> result = new ArrayList<>(initializeList(m + n, 0));
+
         for (int i = m - 1; i >= 0; i--) {
             int carry = 0;
 
@@ -32,16 +33,8 @@ public class multiply {
                 result.set(i + j + 1, product % 10);
                 carry = product / 10;
             }
-
             result.set(i, result.get(i) + carry);
         }
-
-        // Remove leading zeros
-        while (result.size() > 1 && result.get(0) == 0) {
-            result.remove(0);
-        }
-
-        return result;
     }
 
     private static ArrayList<Integer> initializeList(int size, int value) {
@@ -53,14 +46,14 @@ public class multiply {
     }
 
     private static String arrayListToString(ArrayList<Integer> arrayList) {
-        StringBuilder result = new StringBuilder("{");
+    	String result = "{";
         for (int i = 0; i < arrayList.size(); i++) {
-            result.append(arrayList.get(i));
+            result += Integer.toString(arrayList.get(i));
             if (i < arrayList.size() - 1) {
-                result.append(", ");
+                result += ", ";
             }
         }
-        result.append("}");
-        return result.toString();
+        result += "}";
+        return result;
     }
 }
