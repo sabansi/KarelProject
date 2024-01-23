@@ -1,20 +1,31 @@
-public class array2D {
-    public static void main(String[] args) {
-        int[][] matrix = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
-        };
+import acm.program.ConsoleProgram;
 
-        printMatrix(matrix);
-    }
+public class array2D extends ConsoleProgram{
+	public void run() {
+		int array[] = {1, 2, 5 ,2};
+		create(array);
+	}
 
-    private static void printMatrix(int[][] matrix) {
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                System.out.print(matrix[i][j] + " ");
-            }
-            System.out.println();  // Move to the next line after each row
-        }
-    }
+	private void create(int[] array) {
+		String ans = "[";
+		for(int i = 0; i < array.length; i++) {
+			int current = array[i];
+			ans += createStringForCurrent(current);
+		}
+		ans = ans.substring(0, ans.length() - 1);
+		ans += "]";
+		println(ans);
+	}
+
+	private String createStringForCurrent(int current) {
+		String ans = "[";
+		for(int i = 0; i < current; i++){
+			ans += "0,";
+		}
+		ans += "],";
+		return ans;
+	}
 }
+
+
+
