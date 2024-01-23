@@ -31,8 +31,9 @@ public class casino extends ConsoleProgram {
 					currMoney -= betAmount;
 					lostMoney += betAmount;
 				}
-				println(lostMoney);
-				println(currMoney);
+				println("The numbers are: " + roulette + " " + winner);
+				println("lostmoney - " + lostMoney);
+				println("currmoney - " + currMoney);
 	//			println(rolls);
 				rolls++;
 			}
