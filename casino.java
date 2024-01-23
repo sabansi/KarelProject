@@ -40,6 +40,6 @@ public class casino extends ConsoleProgram {
 			middle += rolls;
 		}
 		double ans = middle / 1000;
-		println(ans);
+		println(middle);
 	}
 }
