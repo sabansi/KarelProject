@@ -21,8 +21,9 @@ public class casino extends ConsoleProgram {
 				double betAmount = 1;
 				int roulette = rgen.nextInt(0, 36);
 				int winner = rgen.nextInt(0, 36);
-
-				if (roulette == winner) {
+				println(roulette);
+				println(winner);
+		/*		if (roulette == winner) {
 					double winAmount = betAmount * 36.0;
 					currMoney += winAmount;
 					lostMoney -= winAmount;
@@ -34,11 +35,11 @@ public class casino extends ConsoleProgram {
 				rolls++;
 			}
 
-			totalRolls += rolls;
+			totalRolls += rolls; */
 		}
 
 		double averageRolls = (double) totalRolls / 1000;
-		println("Average number of rolls until losing all money: " + averageRolls);
+		//println("Average number of rolls until losing all money: " + averageRolls);
 	}
 
 	private double determineBetAmount(double currMoney, double lostMoney) {
