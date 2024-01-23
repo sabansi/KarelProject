@@ -12,7 +12,7 @@ public class casino extends ConsoleProgram {
 	private void simulations(int n) {
 		int totalRolls = 0;
 
-		for (int i = 0; i < 1; i++) {
+		for (int i = 0; i < 2; i++) {
 			int rolls = 0;
 			double currMoney = n;
 			double lostMoney = 0;
@@ -37,11 +37,10 @@ public class casino extends ConsoleProgram {
 
 				rolls++;
 			}
-			println(rolls);
 			totalRolls += rolls;
 		}
 		double averageRolls = (double) totalRolls / 1000;
-	//	println("Average number of rolls until losing all money: " + averageRolls);
+		println("Average number of rolls until losing all money: " + averageRolls);
 	}
 
 	private double determineBetAmount(double currMoney, double lostMoney) {
