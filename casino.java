@@ -24,7 +24,8 @@ public class casino extends ConsoleProgram {
 
 				if (roulette == winner) {
 					currMoney += lostMoney + 1;
-					lostMoney = 0; 
+					lostMoney -= betAmount; 
+					if(lostMoney < 0) lostMoney = 0;
 				} else {
 					currMoney -= betAmount;
 					lostMoney += betAmount;
