@@ -37,10 +37,12 @@ public class casino extends ConsoleProgram {
 
 			totalRolls += rolls; */
 		}
-
-		double averageRolls = (double) totalRolls / 1000;
-		//println("Average number of rolls until losing all money: " + averageRolls);
+		}
 	}
+
+	//	double averageRolls = (double) totalRolls / 1000;
+		//println("Average number of rolls until losing all money: " + averageRolls);
+	
 
 	private double determineBetAmount(double currMoney, double lostMoney) {
 		if (lostMoney <= 0) {
