@@ -39,7 +39,7 @@ public class casino extends ConsoleProgram {
 			}
 			totalRolls += rolls;
 		}
-		double averageRolls = (double) totalRolls / 1000;
+		double averageRolls = (double) totalRolls / 2;
 		println("Average number of rolls until losing all money: " + averageRolls);
 	}
 
