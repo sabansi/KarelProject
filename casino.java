@@ -17,7 +17,7 @@ public class casino extends ConsoleProgram {
             double currMoney = n;
             
             while (currMoney > 0) {
-                int betAmount = determineBetAmount(currMoney);
+                int betAmount = determineBetAmount(currMoney, n);
                 int roulette = rgen.nextInt(0, 36);
                 int winner = rgen.nextInt(0, 36);
 
@@ -37,8 +37,8 @@ public class casino extends ConsoleProgram {
         println("Average number of rolls until losing all money: " + averageRolls);
     }
 
-    private int determineBetAmount(double currMoney) {
-        if (currMoney >= 1) {
+    private int determineBetAmount(double currMoney, int n) {
+        if (currMoney >= n) {
             return 1;
         } else {
             return (int) currMoney;
