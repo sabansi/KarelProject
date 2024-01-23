@@ -22,6 +22,7 @@ public class array2D extends ConsoleProgram{
 		for(int i = 0; i < current; i++){
 			ans += "0,";
 		}
+		ans = ans.substring(0, ans.length() - 1);
 		ans += "],";
 		return ans;
 	}
