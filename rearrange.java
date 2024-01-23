@@ -1,10 +1,12 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Set;
 import java.util.StringTokenizer;
 
 import acm.program.ConsoleProgram;
+import javafx.util.Pair;
 
 public class rearrange extends ConsoleProgram {
 	public void run() {
@@ -13,17 +15,16 @@ public class rearrange extends ConsoleProgram {
 	}
 
 	private void rearrange(String word) {
-		HashMap<Integer, String> map = new HashMap<>();
+		ArrayList< Pair<Integer, String> > pair = new ArrayList< Pair<Integer, String> >();
 		StringTokenizer tokenizer = new StringTokenizer(word, " ");
 		while (tokenizer.hasMoreTokens()) {
 			String token = tokenizer.nextToken();
-			map.put(token.length(), token);
+			pair.add(new Pair<>(token.length(), token));
 		}
-
-		ArrayList<Integer> sortedKeys = new ArrayList<Integer>(map.keySet());
-		Collections.sort(sortedKeys);
-		for(Integer key : sortedKeys) {
-			print(map.get(key) + " ");
+		
+		 Collections.sort(pair, Comparator.comparing(Pair::getKey));
+		for(Pair<Integer, String> curPair : pair) {
+			print(curPair.getValue() + " ");
 		}
 	}
 
