@@ -30,7 +30,9 @@ public class casino extends ConsoleProgram {
 					currMoney -= betAmount;
 					lostMoney += betAmount;
 				}
-
+				println(betAmount);
+				println(currMoney);
+				println(lostMoney);
 				rolls++;
 			}
 
