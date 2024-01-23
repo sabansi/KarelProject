@@ -27,7 +27,7 @@ public class multiply extends ConsoleProgram {
 			int carry = 0;
 
 			for (int j = n - 1; j >= 0; j--) {
-				int product = num1.get(i) * num2.get(j)  + carry;
+				int product = num1.get(i) * num2.get(j) + result.get(i + j + 1) + carry;
 
 				result.set(i + j + 1, product % 10);
 				carry = product / 10;
