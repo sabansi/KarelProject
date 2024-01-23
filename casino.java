@@ -21,8 +21,8 @@ public class casino extends ConsoleProgram {
 				double betAmount = determineBetAmount(currMoney, lostMoney);
 				int roulette = rgen.nextInt(0, 36);
 				int winner = rgen.nextInt(0, 36);
-				println(roulette);
-				println(winner);
+			//	println(roulette);
+			//	println(winner);
 				if (roulette == winner) {
 					double winAmount = betAmount * 36.0;
 					currMoney += winAmount;
