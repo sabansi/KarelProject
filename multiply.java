@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class multiply {
     public static void main(String[] args) {
@@ -16,17 +15,14 @@ public class multiply {
 
         ArrayList<Integer> result = multiply(num1, num2);
 
-        // Print the result
-        System.out.print("Result: ");
-        for (int digit : result) {
-            System.out.print(digit);
-        }
+        // Print the result as a string
+        System.out.println("Result: " + arrayListToString(result));
     }
 
     private static ArrayList<Integer> multiply(ArrayList<Integer> num1, ArrayList<Integer> num2) {
         int m = num1.size();
         int n = num2.size();
-        ArrayList<Integer> result = new ArrayList<>(Collections.nCopies(m + n, 0));
+        ArrayList<Integer> result = new ArrayList<>(initializeList(m + n, 0));
 
         for (int i = m - 1; i >= 0; i--) {
             int carry = 0;
@@ -47,5 +43,25 @@ public class multiply {
         }
 
         return result;
+    }
+
+    private static ArrayList<Integer> initializeList(int size, int value) {
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < size; i++) {
+            list.add(value);
+        }
+        return list;
+    }
+
+    private static String arrayListToString(ArrayList<Integer> arrayList) {
+        StringBuilder result = new StringBuilder("{");
+        for (int i = 0; i < arrayList.size(); i++) {
+            result.append(arrayList.get(i));
+            if (i < arrayList.size() - 1) {
+                result.append(", ");
+            }
+        }
+        result.append("}");
+        return result.toString();
     }
 }
