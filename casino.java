@@ -37,7 +37,7 @@ public class casino extends ConsoleProgram {
 
 				rolls++;
 			}
-			println("current rolls are: " + rolls);
+			println(" sghvisugvsy8gugsby8goshbng 9ysh8gb8s7gsbg current rolls are: " + rolls);
 			totalRolls += rolls;
 		}
 		double averageRolls = totalRolls / 2.0;
