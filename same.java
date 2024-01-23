@@ -19,7 +19,7 @@ public class same extends ConsoleProgram {
 				break;
 			}
 		}
-		if (!check) {
+		if (check) {
 			println("true");
 		}
 	}
