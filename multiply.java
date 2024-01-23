@@ -22,8 +22,8 @@ public class multiply {
     private static ArrayList<Integer> multiply(ArrayList<Integer> num1, ArrayList<Integer> num2) {
         int m = num1.size();
         int n = num2.size();
-        ArrayList<Integer> result = new ArrayList<>();
-
+        ArrayList<Integer> result = new ArrayList<>(m+n);
+        result.
         for (int i = m - 1; i >= 0; i--) {
             int carry = 0;
 
