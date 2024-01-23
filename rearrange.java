@@ -21,20 +21,19 @@ public class rearrange extends ConsoleProgram {
 			String token = tokenizer.nextToken();
 			pair.add(new Pair<>(token.length(), token));
 		}
-		
-		for(int i = 0; i < pair.size() - 1; i++) {
+
+		for (int i = 0; i < pair.size() - 1; i++) {
 			int minIndex = i;
-			for(int j = i + 1; j < pair.size(); j++) {
-				if(pair.get(j).getKey() <= pair.get(minIndex).getKey()) {
+			for (int j = i + 1; j < pair.size(); j++) {
+				if (pair.get(j).getKey() <= pair.get(minIndex).getKey()) {
 					minIndex = j;
 				}
 			}
 			Pair<Integer, String> temp = pair.get(i);
-	        pair.set(i, pair.get(minIndex));
-	        pair.set(minIndex, temp);
-		} 
- 
-	//	Collections.sort(pair, Comparator.comparing(Pair::getKey));
+			pair.set(i, pair.get(minIndex));
+			pair.set(minIndex, temp);
+		}
+
 		for (Pair<Integer, String> curPair : pair) {
 			print(curPair.getValue() + " ");
 		}
