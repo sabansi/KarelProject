@@ -23,7 +23,6 @@ public class multiply {
         int m = num1.size();
         int n = num2.size();
         ArrayList<Integer> result = new ArrayList<>(m+n);
-        result.
         for (int i = m - 1; i >= 0; i--) {
             int carry = 0;
 
