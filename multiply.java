@@ -1,11 +1,12 @@
 import java.util.ArrayList;
 
-public class multiply {
-    public static void main(String[] args) {
+import acm.program.ConsoleProgram;
+
+public class multiply extends ConsoleProgram{
+    public void run() {
         ArrayList<Integer> num1 = new ArrayList<>();
         ArrayList<Integer> num2 = new ArrayList<>();
 
-        // Example numbers
         num1.add(9);
         num1.add(9);
         num1.add(9);
@@ -13,13 +14,12 @@ public class multiply {
         num2.add(2);
         num2.add(3);
 
-        ArrayList<Integer> result = multiply(num1, num2);
+        multiply(num1, num2);
 
-        // Print the result as a string
-        System.out.println("Result: " + arrayListToString(result));
+    }     
     
 
-    private static ArrayList<Integer> multiply(ArrayList<Integer> num1, ArrayList<Integer> num2) {
+    private void multiply(ArrayList<Integer> num1, ArrayList<Integer> num2) {
         int m = num1.size();
         int n = num2.size();
         ArrayList<Integer> result = new ArrayList<>(initializeList(m + n, 0));
@@ -35,6 +35,7 @@ public class multiply {
             }
             result.set(i, result.get(i) + carry);
         }
+        println("Result: " + arrayListToString(result));
     }
 
     private static ArrayList<Integer> initializeList(int size, int value) {
