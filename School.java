@@ -75,4 +75,9 @@ public class School {
 		}
 		return thisTeacherPupils.iterator();
 	}
+	
+	public void removeTeacher(String teacher){
+		teacherSubjects.remove(teacher);
+		teachers.remove(teacher);
+	}
 }
