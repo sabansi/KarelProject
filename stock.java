@@ -55,6 +55,6 @@ public class stock extends ConsoleProgram {
 				}
 			}
 		}
-		println(count[2023]);
+		println(count[2020]);
 	}
 }
