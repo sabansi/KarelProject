@@ -25,8 +25,8 @@ public class stock extends ConsoleProgram {
 	}
 
 	private void calculateAvarage(HashMap<String, HashMap<String, Double>> prices) {
-		Double[] array = null;
-		int[] count = null;
+		double[] array = new double[2024];
+		double[] count = new double[2024];
 		for (String company : prices.keySet()) {
 			for (String year : prices.get(company).keySet()) {
 				Integer curYear = Integer.parseInt(year);
