@@ -93,7 +93,7 @@ public class game extends GraphicsProgram{
 			vx = x;
 		}
 		if(VY.getText() != ""){
-			int y = convertToInt(VY.getText());
+			int y = Integer.parseInt(VY.getText());
 			vx = y;
 		}
 	}
