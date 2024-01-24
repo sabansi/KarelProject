@@ -1,34 +1,36 @@
 import java.util.HashMap;
+import java.util.Map;
 
 import acm.program.ConsoleProgram;
 
 public class stock extends ConsoleProgram {
-	public void run() {
-		HashMap<String, HashMap<String, Double>> prices = new HashMap<>();
-		HashMap<String, Double> innerMap1 = new HashMap<>();
-        innerMap1.put("2022", 5.0);
-        prices.getOrDefault("A", innerMap1);
-        
-        HashMap<String, Double> innerMap2 = new HashMap<>();
-        innerMap2.put("2021", 4.0);
-        prices.getOrDefault("A", innerMap2);
-        
-        HashMap<String, Double> innerMap3 = new HashMap<>();
-        innerMap3.put("2022", 7.0);
-        prices.getOrDefault("B", innerMap3);
-        
-        HashMap<String, Double> innerMap4 = new HashMap<>();
-        innerMap4.put("2021", 7.0);
-        prices.getOrDefault("B", innerMap4);
-        
-        HashMap<String, Double> innerMap5 = new HashMap<>();
-        innerMap5.put("2022", 12.0);
-        prices.getOrDefault("C", innerMap5);
-        
-        println(prices);
-        
-		calculateAvarage(prices);
-	}
+    public void run() {
+        HashMap<String, HashMap<String, Double>> prices = new HashMap<>();
+
+        // Adding data for company A
+        addPrice(prices, "A", "2022", 5.0);
+        addPrice(prices, "A", "2021", 4.0);
+
+        // Adding data for company B
+        addPrice(prices, "B", "2022", 7.0);
+        addPrice(prices, "B", "2021", 7.0);
+
+        // Adding data for company C
+        addPrice(prices, "C", "2022", 12.0);
+
+        // Calculate average
+        calculateAvarage(prices);
+    }
+
+    private static void addPrice(Map<String, HashMap<String, Double>> prices, String company, String year, double value) {
+        // Check if the company already exists in the prices map
+        if (!prices.containsKey(company)) {
+            prices.put(company, new HashMap<>());
+        }
+
+        // Add the price for the specified year
+        prices.get(company).put(year, value);
+    }
 
 	private void calculateAvarage(HashMap<String, HashMap<String, Double>> prices) {
 		double[] array = new double[2024];
