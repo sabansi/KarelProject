@@ -40,10 +40,8 @@ public class stock extends ConsoleProgram {
 		double[] array = new double[2024];
 		double[] count = new double[2024];
 		for (String company : prices.keySet()) {
-		    println(company);
 		    for (String year : prices.get(company).keySet()) {
 		        Integer curYear = Integer.parseInt(year);
-		        println("Processing year: " + curYear);
 		        array[curYear] += prices.get(company).get(year);
 		        count[curYear]++;
 		    }
@@ -66,4 +64,52 @@ public class stock extends ConsoleProgram {
 		}
 		println(ans);
 	}
+}
+
+
+
+ackage finals;
+
+import acm.util.RandomGenerator;
+
+public class Car {
+	
+	
+	private static final int KILOMETERS_PER_LITER = 7;
+	
+	private int mileage;
+	private boolean isBroken;
+	private int gas;
+	private RandomGenerator rgen;
+	
+	public Car(int gas, int mileage) {
+		this.gas = gas;
+		this.mileage = mileage;
+		this.isBroken = false;
+		this.rgen = RandomGenerator.getInstance();
+	}
+	
+	public boolean turnOnAndDrive(int kmsToDrive) {
+		int d = mileage / 10000;
+		d++;
+		if (d > 10) {
+			d = 10;
+		}
+		if (rgen.nextInt(10) < d) {
+			isBroken = true;
+		}
+		if (isBroken) {
+			return false;
+		}
+		if (kmsToDrive / KILOMETERS_PER_LITER <= gas) {
+			gas -= kmsToDrive / KILOMETERS_PER_LITER;
+			mileage += kmsToDrive;
+			return true;
+		} 
+		mileage += gas * KILOMETERS_PER_LITER;
+		gas = 0;
+		return false;
+	}
+	
+	
 }
