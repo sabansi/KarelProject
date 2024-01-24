@@ -89,20 +89,11 @@ public class game extends GraphicsProgram{
 	
 	public void actionPerformed(ActionEvent e){
 		if(VX.getText() != ""){
-			int x = convertToInt(VX.getText());
-			vx += x;
+			int x = Integer.parseInt(VX.getText());
+			vx = x;
 		}
 		if(VY.getText() != ""){
 			int y = convertToInt(VY.getText());
-			vx += y;
+			vx = y;
 		}
 	}
-
-	private int convertToInt(String text) {
-		int ans = 0;
-		for(int i = 0; i < text.length(); i++){
-			ans = 10 * ans + (text.charAt(i) - 48);
-		}
-		return ans;
-	}
-}
