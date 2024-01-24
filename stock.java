@@ -41,7 +41,7 @@ public class stock extends ConsoleProgram {
 			}
 		}
 		double max = array[0];
-		double ans = 0;
+		int ans = 0;
 		for (int i = 0; i < array.length; i++) {
 			if (array[i] != 0 && count[i] != 0) {
 				if (array[i] > max) {
