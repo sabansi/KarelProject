@@ -7,23 +7,23 @@ public class stock extends ConsoleProgram {
 		HashMap<String, HashMap<String, Double>> prices = new HashMap<>();
 		HashMap<String, Double> innerMap1 = new HashMap<>();
         innerMap1.put("2022", 5.0);
-        prices.put("A", innerMap1);
+        prices.getOrDefault("A", innerMap1);
         
         HashMap<String, Double> innerMap2 = new HashMap<>();
         innerMap2.put("2021", 4.0);
-        prices.put("A", innerMap2);
+        prices.getOrDefault("A", innerMap2);
         
         HashMap<String, Double> innerMap3 = new HashMap<>();
         innerMap3.put("2022", 7.0);
-        prices.put("B", innerMap3);
+        prices.getOrDefault("B", innerMap3);
         
         HashMap<String, Double> innerMap4 = new HashMap<>();
         innerMap4.put("2021", 7.0);
-        prices.put("B", innerMap4);
+        prices.getOrDefault("B", innerMap4);
         
         HashMap<String, Double> innerMap5 = new HashMap<>();
         innerMap5.put("2022", 12.0);
-        prices.put("C", innerMap5);
+        prices.getOrDefault("C", innerMap5);
         
         println(prices);
         
