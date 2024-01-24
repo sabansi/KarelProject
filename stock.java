@@ -2,35 +2,53 @@ import java.util.HashMap;
 
 import acm.program.ConsoleProgram;
 
-public class stock extends ConsoleProgram{
+public class stock extends ConsoleProgram {
 	public void run() {
-		HashMap<String, HashMap<String,Double>> prices = new HashMap<>();
+		HashMap<String, HashMap<String, Double>> prices = new HashMap<>();
+		HashMap<String, Double> innerMap1 = new HashMap<>();
+        innerMap1.put("2022", 5.0);
+        prices.put("A", innerMap1);
+        
+        HashMap<String, Double> innerMap2 = new HashMap<>();
+        innerMap2.put("2021", 4.0);
+        prices.put("A", innerMap2);
+        
+        HashMap<String, Double> innerMap3 = new HashMap<>();
+        innerMap3.put("2022", 7.0);
+        prices.put("B", innerMap3);
+        
+        HashMap<String, Double> innerMap4 = new HashMap<>();
+        innerMap4.put("2021", 7.0);
+        prices.put("B", innerMap4);
+        
 		calculateAvarage(prices);
 	}
 
 	private void calculateAvarage(HashMap<String, HashMap<String, Double>> prices) {
 		Double[] array = null;
 		int[] count = null;
-		for(String company : prices.keySet()) {
-			for(String year : prices.get(company).keySet()) {
+		for (String company : prices.keySet()) {
+			for (String year : prices.get(company).keySet()) {
 				Integer curYear = Integer.parseInt(year);
 				array[curYear] += prices.get(company).get(year);
 				count[curYear]++;
 			}
 		}
-		for(int i = 0; i < 2024; i++) {
-			if(array[i] != 0 && count[i] != 0) {
-			array[i] /= count[i];
-		}
-		}
-		double max = array[0];
-		double ans -
-		for(int i = 0; i < array.length; i++) {
-			if(array[i] != 0 && count[i] != 0) {
-			if(array[i] > max) {
-				max = array[i];
-				ans = i;
+		for (int i = 0; i < 2024; i++) {
+			if (array[i] != 0 && count[i] != 0) {
+				array[i] /= count[i];
 			}
 		}
+		double max = array[0];
+		double ans = 0;
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] != 0 && count[i] != 0) {
+				if (array[i] > max) {
+					max = array[i];
+					ans = i;
+				}
+			}
+		}
+		println(ans);
 	}
 }
