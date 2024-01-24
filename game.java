@@ -76,28 +76,27 @@ public class game extends GraphicsProgram{
 		add(VY, SOUTH);
 	}
 	
-	@Override
-    public void mouseClicked(MouseEvent e){
-    	if(e.getLocationOnScreen() != null && vx == 0 && vy ==0){
-    		counterStop = 0;
-    		counterResume++;
-    	}
-    	else if(e.getLocationOnScreen() != null && (vx != 0 && vy != 0)){
-    		counterResume = 0;
-    		counterStop++;
-    	}
-    }
+	 @Override
+	    public void mouseClicked(MouseEvent e) {
+	        if (e.getLocationOnScreen() != null && Math.abs(vx) < 0.01 && Math.abs(vy) < 0.01) {
+	            counterStop = 0;
+	            counterResume++;
+	        } else if (e.getLocationOnScreen() != null && (Math.abs(vx) >= 0.01 || Math.abs(vy) >= 0.01)) {
+	            counterResume = 0;
+	            counterStop++;
+	        }
+	    }
 	
-	public void actionPerformed(ActionEvent e){
-		if(VX.getText() != ""){
-			int x = convertToInt(VX.getText());
-			vx = x;
-		}
-		if(VY.getText() != ""){
-			int y = convertToInt(VY.getText());
-			vx = y;
-		}
-	}
+	 public void actionPerformed(ActionEvent e) {
+	        if (!VX.getText().isEmpty()) {
+	            int x = convertToInt(VX.getText());
+	            vx = x;
+	        }
+	        if (!VY.getText().isEmpty()) {
+	            int y = convertToInt(VY.getText());
+	            vy = y; 
+	        }
+	    }
 
 	private int convertToInt(String text) {
 		int ans = 0;
