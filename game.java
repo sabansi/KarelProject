@@ -4,7 +4,6 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import javax.swing.SwingWorker;
 
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
@@ -29,26 +28,20 @@ public class game extends GraphicsProgram {
 
     public void run() {
         drawTheBall();
-        startBallMovement();
+        new Thread(() -> ballMovement()).start();
     }
 
-    private void startBallMovement() {
-        SwingWorker<Void, Void> worker = new SwingWorker<>() {
-            @Override
-            protected Void doInBackground() {
-                while (true) {
-                    if (!isStopped) {
-                        moveBall();
-                    }
-                    try {
-                        Thread.sleep(DELAY);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
+    private void ballMovement() {
+        while (true) {
+            if (!isStopped) {
+                moveBall();
             }
-        };
-        worker.execute();
+            try {
+                Thread.sleep(DELAY);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private void moveBall() {
