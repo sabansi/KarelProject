@@ -32,6 +32,7 @@ public class stock extends ConsoleProgram {
 		double[] array = new double[2024];
 		double[] count = new double[2024];
 		for (String company : prices.keySet()) {
+			println(company);
 			for (String year : prices.get(company).keySet()) {
 				Integer curYear = Integer.parseInt(year);
 				println(curYear);
