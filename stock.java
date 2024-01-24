@@ -17,6 +17,12 @@ public class stock extends ConsoleProgram {
 
         // Adding data for company C
         addPrice(prices, "C", "2022", 12.0);
+        addPrice(prices, "A", "2020", 10.0);
+        addPrice(prices, "A", "2019", 3.0);
+        addPrice(prices, "C", "2019", 15.0);
+        addPrice(prices, "B", "2019", 8.0);
+        addPrice(prices, "B", "2020", 4.0);
+        
 
         // Calculate average
         calculateAvarage(prices);
