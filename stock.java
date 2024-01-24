@@ -35,7 +35,7 @@ public class stock extends ConsoleProgram {
 			println(company);
 			for (String year : prices.get(company).keySet()) {
 				Integer curYear = Integer.parseInt(year);
-				println(curYear);
+				println(prices.get(company).keySet());
 				array[curYear] += prices.get(company).get(year);
 				count[curYear]++;
 			}
