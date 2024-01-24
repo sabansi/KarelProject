@@ -23,12 +23,10 @@ public class stock extends ConsoleProgram {
     }
 
     private static void addPrice(Map<String, HashMap<String, Double>> prices, String company, String year, double value) {
-        // Check if the company already exists in the prices map
         if (!prices.containsKey(company)) {
             prices.put(company, new HashMap<>());
         }
 
-        // Add the price for the specified year
         prices.get(company).put(year, value);
     }
 
@@ -60,6 +58,6 @@ public class stock extends ConsoleProgram {
 				}
 			}
 		}
-		println(count[2022]);
+		println(ans);
 	}
 }
