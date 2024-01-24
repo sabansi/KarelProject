@@ -51,6 +51,7 @@ public class game extends GraphicsProgram {
                     vy = -vy;
                 }
             }
+            else ball.move(0, 0);
         }
     }
 
