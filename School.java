@@ -1,63 +1,78 @@
-//71. School კლასი(2018 წლის გამოცდის ამოცანა).
-//თქვენი მიზანია დაწეროთ School კლასი, რომლის საშუალებითაც შევძლებთ
-//უნივერსიტეტის მართვას. კლასს უნდა ჰქონდეს კონსტრუქტორი და 5 public მეთოდი.
-
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 
 public class School {
-//	
-//	კონსტრუქტორს არაფერი არ გადაეცემა. აქ შეგიძლიათ ინიციალიზაცია გაუკეთოთ
-//	თქვენთვის საჭირო ცვლადებს.
+
+	private ArrayList<String> teachers;
+	private ArrayList<String> subjects;
+	private HashMap<String, ArrayList<String>> teacherSubjects;
+	private HashMap<String, ArrayList<String>> subjectTeachers;
+	private HashMap<String, ArrayList<String>> subjectPupils;
+	private HashMap<String, ArrayList<String>> pupilSubjects;
+
 	public School() {
-		
+		teachers = new ArrayList<>();
+		teacherSubjects = new HashMap<>();
+		subjectTeachers = new HashMap<>();
+		subjects = new ArrayList<>();
+		subjectPupils = new HashMap<>();
+		pupilSubjects = new HashMap<>();
 	}
-	
-//	addTeacher მეთოდის საშუალებით შეგიძლიათ სკოლას დაამატოთ ახალი
-//	მასწავლებელი. მეთოდს გადაეცემა მასწავლებლის სახელი. შეგიძლიათ ჩათვალოთ,
-//	რომ მასწავლებლის სახელი უნიკალურია.
+
 	public void addTeacher(String teacher) {
-		// TIP:	you can use System.out.println() to print your structures for testing 
+		if (!teachers.contains(teacher)) {
+			teachers.add(teacher);
+		}
 	}
-	
-//	addSubject მეთოდის საშუალებით შეგიძლიათ მასწავლებელს დაუმატოთ საგანი.
-//	მეთოდს გადაეცემა მასწავლებლის სახელი და საგნის სახელი. ჩათვალეთ, რომ საგნის
-//	სახელი უნიკალურია. ერთი და იგივე მასწავლებელი შეიძლება რამდენიმე საგანს
-//	კითხულობდეს, ასევე ერთსა და იმავე საგანს შეიძლება რამდენიმე მასწავლებელი
-//	კითხულობდეს ერთდროულად.
-//	თუკი teacher სახელის მქონე მასწავლებელი არ არის აქამდე დამატებული, მაშინ
-//	მეთოდმა არაფერი არ უნდა გააკეთოს.
+
 	public void addSubject(String teacher, String subject) {
-		// TIP:	you can use System.out.println() to print your structures for testing
+		if (!teachers.contains(teacher)) {
+			return;
+		}
+		if (!subjects.contains(subject)) {
+			subjects.add(subject);
+		}
+		if (!teacherSubjects.containsKey(teacher)) {
+			teacherSubjects.put(teacher, new ArrayList<>());
+		}
+		teacherSubjects.get(teacher).add(subject);
+		if (!subjectTeachers.containsKey(subject)) {
+			subjectTeachers.put(subject, new ArrayList<>());
+		}
+		subjectTeachers.get(subject).add(teacher);
 	}
-	
-//	addPupil მეთოდის საშუალებით შეგიძლიათ საგანზე დაამატოთ მოსწავლე. ერთი და
-//	იგივე მოსწავლე შეიძლება ერთ ან რამდენიმე საგანს სწავლობდეს.
+
 	public void addPupil(String pupil, String subject) {
-		// TIP:	you can use System.out.println() to print your structures for testing
+		if (!subjects.contains(subject)) {
+			return;
+		}
+		if (!subjectPupils.containsKey(subject)) {
+			subjectPupils.put(subject, new ArrayList<>());
+		}
+		subjectPupils.get(subject).add(pupil);
+		if (!pupilSubjects.containsKey(pupil)) {
+			pupilSubjects.put(pupil, new ArrayList<>());
+		}
+		pupilSubjects.get(pupil).add(subject);
 	}
-	
-//	getTeachers მეთოდს გადაეცემა მოსწავლის სახელი და მან უნდა დააბრუნოს ამ
-//	მოსწავლის ყველა მასწავლებელზე იტერატორი. ანუ მხოლოდ იმ მასწავლებლების
-//	სახელები, რომლებიც ასწავლიან იმ საგნებს, რომლებზეც მოსწავლეა
-//	დამატებული(სწავლობს). თუკი pupil სახელის მოსწავლე არ გვყავს მაშინ მეთოდმა
-//	უნდა დააბრუნოს null.
-	public Iterator<String> getTeachers(String pupil){
-		return null;
+
+	public Iterator<String> getTeachers(String pupil) {
+		ArrayList<String> studentSubjects = pupilSubjects.get(pupil);
+		ArrayList<String> studentTeachers = new ArrayList<>();
+		for (String nextSubject : studentSubjects) {
+			ArrayList<String> nextTeachers = subjectTeachers.get(nextSubject);
+			studentTeachers.addAll(nextTeachers);
+		}
+		return studentTeachers.iterator();
 	}
-	
-//	getPupils მეთოდს გადაეცემა მასწავლებლის სახელი და მან უნდა დააბრუნოს ამ
-//	მასწავლებლის ყველა სტუდენტზე იტერატორი. ანუ მხოლოდ იმ სტუდენტების
-//	სახელები, რომლებიც მის რომელიმე საგანს სწავლობენ. თუკი teacher სახელის მქონე
-//	ლექტორი არ გვყავს მაშინ მეთოდმა უნდა დააბრუნოს null.
-	public Iterator<String> getPupils(String teacher){
-		return null;
+
+	public Iterator<String> getPupils(String teacher) {
+		ArrayList<String> thisTeacherSubjects = teacherSubjects.get(teacher);
+		ArrayList<String> thisTeacherPupils = new ArrayList<>();
+		for (String nextSubject : thisTeacherSubjects) {
+			thisTeacherPupils.addAll(subjectPupils.get(nextSubject));
+		}
+		return thisTeacherPupils.iterator();
 	}
-	
-//	მეთოდმა უნდა წაშალოს მასწავლებლის შესახებ ყველა ინფორმაცია. ამ მეთოდის
-//	გამოძახების, შემდეგ getTeachers მეთოდმა არ უნდა დააბრუნოს teacher სახელი არც
-//	ერთი სტუდენტისთვის.
-	public void removeTeacher(String teacher) {
-		// TIP:	you can use System.out.println() to print your structures for testing
-	}
-	
 }
