@@ -22,8 +22,8 @@ public class stock extends ConsoleProgram {
         prices.put("B", innerMap4);
         
         HashMap<String, Double> innerMap5 = new HashMap<>();
-        innerMap4.put("2022", 12.0);
-        prices.put("C", innerMap4);
+        innerMap5.put("2022", 12.0);
+        prices.put("C", innerMap5);
         
 		calculateAvarage(prices);
 	}
