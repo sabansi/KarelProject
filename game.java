@@ -58,7 +58,7 @@ public class game extends GraphicsProgram{
 	}
 
 	private void drawTheBall() {
-		ball = new GOval(1, 2, getWidth() - BALL_RADIUS, getHeight() - BALL_RADIUS);
+		ball = new GOval(1, 2, getWidth() - 1, getHeight() - 1);
 		ball.setFilled(true);
 		ball.setColor(Color.BLACK);
 		add(ball);
