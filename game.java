@@ -14,6 +14,8 @@ public class game extends GraphicsProgram {
     private JTextField VY;
     private int vx;
     private int vy;
+    private int counterStop;
+    private int counterResume;
     private boolean isStopped = false;
     private RandomGenerator rgen = RandomGenerator.getInstance();
     private static final int BALL_RADIUS = 5;
@@ -28,33 +30,28 @@ public class game extends GraphicsProgram {
 
     public void run() {
         drawTheBall();
-        new Thread(() -> ballMovement()).start();
+        ballMovement();
     }
 
     private void ballMovement() {
+        vy = rgen.nextInt(0, 10);
+        vx = rgen.nextInt(0, 10);
+
         while (true) {
             if (!isStopped) {
-                moveBall();
+                ball.move(vx, vy);
+                pause(DELAY);
+                if (ball.getX() < 0) {
+                    vx = -vx;
+                } else if (ball.getX() > getWidth() - 2 * BALL_RADIUS) {
+                    vx = -vx;
+                } else if (ball.getY() < 0) {
+                    vy = -vy;
+                } else if (ball.getY() > getHeight() - 2 * BALL_RADIUS) {
+                    vy = -vy;
+                }
             }
-            try {
-                Thread.sleep(DELAY);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    private void moveBall() {
-        ball.move(vx, vy);
-        checkWallCollision();
-    }
-
-    private void checkWallCollision() {
-        if (ball.getX() < 0 || ball.getX() > getWidth() - 2 * BALL_RADIUS) {
-            vx = -vx;
-        }
-        if (ball.getY() < 0 || ball.getY() > getHeight() - 2 * BALL_RADIUS) {
-            vy = -vy;
+            else ball.move(0, 0);
         }
     }
 
