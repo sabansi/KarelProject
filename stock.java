@@ -25,6 +25,8 @@ public class stock extends ConsoleProgram {
         innerMap5.put("2022", 12.0);
         prices.put("C", innerMap5);
         
+        println(prices);
+        
 		calculateAvarage(prices);
 	}
 
