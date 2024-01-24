@@ -29,17 +29,18 @@ public class stock extends ConsoleProgram {
 	}
 
 	private void calculateAvarage(HashMap<String, HashMap<String, Double>> prices) {
-		double[] array = new double[2055];
-		double[] count = new double[2055];
+		double[] array = new double[2024];
+		double[] count = new double[2024];
 		for (String company : prices.keySet()) {
-			println(company);
-			for (String year : prices.get(company).keySet()) {
-				Integer curYear = Integer.parseInt(year);
-		//		println(prices.get(company).keySet());
-				array[curYear] += prices.get(company).get(year);
-				count[curYear]++;
-			}
+		    println(company);
+		    for (String year : prices.get(company).keySet()) {
+		        Integer curYear = Integer.parseInt(year);
+		        println("Processing year: " + curYear);
+		        array[curYear] += prices.get(company).get(year);
+		        count[curYear]++;
+		    }
 		}
+
 		for (int i = 0; i < 2024; i++) {
 			if (array[i] != 0 && count[i] != 0) {
 				array[i] /= count[i];
@@ -55,6 +56,6 @@ public class stock extends ConsoleProgram {
 				}
 			}
 		}
-		println(count[2020]);
+		println(count[2022]);
 	}
 }
