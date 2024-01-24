@@ -54,6 +54,6 @@ public class stock extends ConsoleProgram {
 				}
 			}
 		}
-		println(ans);
+		println(max);
 	}
 }
